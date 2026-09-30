@@ -1,0 +1,3397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIPERA — Ficha de Personagem</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+
+    --ouro: #d6a62a;
+    --ouro-claro: #f2cc58;
+    --ouro-escuro: #9d7617;
+
+    --preto: #070707;
+    --fundo: #0d0d0d;
+    --fundo-2: #131313;
+    --fundo-3: #191919;
+
+    --texto: #eeeeee;
+    --texto-fraco: #999999;
+
+    --borda: rgba(214,166,42,.28);
+
+    --vermelho: #d95757;
+    --verde: #68bd70;
+    --azul: #5899d8;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    color: var(--texto);
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.76),
+            rgba(0,0,0,.94)
+        ),
+        url("https://giffiles.alphacoders.com/142/142355.gif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.topo {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 25px;
+
+    background: rgba(7,7,7,.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--borda);
+
+}
+
+.logo {
+
+    color: var(--ouro-claro);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+.topo-botoes {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+button {
+
+    border: 1px solid var(--ouro);
+
+    background: var(--ouro);
+
+    color: #080808;
+
+    padding: 10px 15px;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+button:hover {
+
+    background: var(--ouro-claro);
+
+    transform: translateY(-1px);
+
+}
+
+button.secundario {
+
+    background: transparent;
+
+    color: var(--ouro-claro);
+
+}
+
+button.perigo {
+
+    border-color: var(--vermelho);
+
+    background: transparent;
+
+    color: var(--vermelho);
+
+}
+
+
+/* =========================================================
+   CAPA
+========================================================= */
+
+.capa {
+
+    min-height: 260px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--borda);
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.8)
+        );
+
+}
+
+.capa h1 {
+
+    margin: 0;
+
+    color: var(--ouro-claro);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(50px, 9vw, 90px);
+
+    letter-spacing: 9px;
+
+    text-shadow:
+        0 0 30px rgba(214,166,42,.25);
+
+}
+
+.capa p {
+
+    margin-top: 10px;
+
+    color: #aaa;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+
+    width: min(1200px, 94%);
+
+    margin: 30px auto 80px;
+
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.secao {
+
+    margin-bottom: 22px;
+
+    padding: 25px;
+
+    background: rgba(10,10,10,.93);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.35);
+
+}
+
+.secao h2 {
+
+    margin: 0 0 20px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--borda);
+
+    color: var(--ouro-claro);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+}
+
+.subtitulo {
+
+    margin: 25px 0 12px;
+
+    color: var(--ouro);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 14px;
+
+}
+
+.grid-atributos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 12px;
+
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+label {
+
+    color: #cfcfcf;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border-radius: 6px;
+
+    border: 1px solid #303030;
+
+    background: #111;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+
+    transition: .2s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--ouro);
+
+    box-shadow:
+        0 0 0 2px rgba(214,166,42,.08);
+
+}
+
+textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+
+}
+
+
+/* =========================================================
+   IMAGEM
+========================================================= */
+
+.imagem-area {
+
+    display: grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+.preview {
+
+    width: 180px;
+
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    border: 1px solid var(--borda);
+
+    background: #0b0b0b;
+
+    color: #555;
+
+    text-align: center;
+
+}
+
+.preview img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   PONTOS
+========================================================= */
+
+.pontos-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    padding: 13px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 7px;
+
+}
+
+.pontos-restantes {
+
+    color: var(--verde);
+
+    font-weight: 700;
+
+}
+
+.pontos-excedidos {
+
+    color: var(--vermelho);
+
+    font-weight: 700;
+
+}
+
+.alerta {
+
+    display: none;
+
+    margin-bottom: 15px;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    border: 1px solid rgba(217,83,83,.4);
+
+    background: rgba(217,83,83,.08);
+
+    color: #ff8585;
+
+}
+
+
+/* =========================================================
+   HUD VIPERA — PV / LIMITE / SANIDADE
+========================================================= */
+
+.status-hud {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.status-card {
+
+    position: relative;
+
+    min-height: 165px;
+
+    padding: 22px 22px 18px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28,28,28,.98),
+            rgba(9,9,9,.98)
+        );
+
+    border: 1px solid rgba(214,166,42,.20);
+
+    border-radius: 12px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 10px 30px rgba(0,0,0,.35);
+
+    transition:
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.status-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 18px;
+
+    right: 18px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(214,166,42,.65),
+            transparent
+        );
+
+}
+
+
+.status-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    bottom: 20px;
+
+    left: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            var(--ouro),
+            transparent
+        );
+
+}
+
+
+.status-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(214,166,42,.38);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04),
+        0 15px 38px rgba(0,0,0,.45),
+        0 0 22px rgba(214,166,42,.035);
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DO STATUS
+========================================================= */
+
+.status-topo {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.status-nome {
+
+    position: relative;
+
+    padding-left: 12px;
+
+    color: #8d8d8d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.status-nome::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    width: 4px;
+
+    height: 4px;
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+
+    background: var(--ouro);
+
+    box-shadow:
+        0 0 7px rgba(214,166,42,.55);
+
+}
+
+
+/* =========================================================
+   VALOR PRINCIPAL
+========================================================= */
+
+.status-valor {
+
+    color: #f2f2f2;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .5px;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,.04);
+
+}
+
+
+/* =========================================================
+   BARRA
+========================================================= */
+
+.barra {
+
+    position: relative;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    margin-top: 5px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border: 1px solid
+        rgba(255,255,255,.045);
+
+    border-radius: 20px;
+
+}
+
+
+.barra::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.035),
+            transparent
+        );
+
+}
+
+
+.barra-preenchimento {
+
+    position: relative;
+
+    height: 100%;
+
+    width: 100%;
+
+    border-radius: inherit;
+
+    transition:
+        width .35s cubic-bezier(.4,0,.2,1);
+
+}
+
+
+/* =========================================================
+   CORES DOS STATUS
+========================================================= */
+
+.status-card.pv {
+
+    border-color:
+        rgba(170,65,65,.22);
+
+}
+
+.status-card.pv::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(190,72,72,.65),
+            transparent
+        );
+
+}
+
+.status-card.pv::after {
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            #a94747,
+            transparent
+        );
+
+}
+
+.status-card.pv
+.barra-preenchimento {
+
+    background:
+        linear-gradient(
+            90deg,
+            #713535,
+            #c15a5a
+        );
+
+    box-shadow:
+        0 0 10px rgba(193,90,90,.28);
+
+}
+
+
+/* =========================================================
+   LIMITE
+========================================================= */
+
+.status-card.limite {
+
+    border-color:
+        rgba(214,166,42,.24);
+
+}
+
+.status-card.limite
+.barra-preenchimento {
+
+    background:
+        linear-gradient(
+            90deg,
+            #8e6b17,
+            #e0b735
+        );
+
+    box-shadow:
+        0 0 11px rgba(214,166,42,.32);
+
+}
+
+
+/* =========================================================
+   SANIDADE
+========================================================= */
+
+.status-card.sanidade {
+
+    border-color:
+        rgba(82,132,175,.20);
+
+}
+
+.status-card.sanidade::before {
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(88,153,216,.6),
+            transparent
+        );
+
+}
+
+.status-card.sanidade::after {
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            #5899d8,
+            transparent
+        );
+
+}
+
+.status-card.sanidade
+.barra-preenchimento {
+
+    background:
+        linear-gradient(
+            90deg,
+            #365d7e,
+            #5899d8
+        );
+
+    box-shadow:
+        0 0 10px rgba(88,153,216,.25);
+
+}
+
+
+/* =========================================================
+   CAMPOS DO HUD
+========================================================= */
+
+.status-controles {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 16px;
+
+}
+
+
+.status-controles input {
+
+    min-width: 0;
+
+    padding: 8px 9px;
+
+    color: #bdbdbd;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 5px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease;
+
+}
+
+
+.status-controles input:hover {
+
+    background:
+        rgba(255,255,255,.04);
+
+    border-color:
+        rgba(214,166,42,.20);
+
+}
+
+
+.status-controles input:focus {
+
+    color: white;
+
+    background:
+        rgba(214,166,42,.035);
+
+    border-color:
+        rgba(214,166,42,.5);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(214,166,42,.055);
+
+}
+
+
+.status-controles input::-webkit-inner-spin-button,
+.status-controles input::-webkit-outer-spin-button {
+
+    opacity: .25;
+
+}
+
+
+/* =========================================================
+   PERÍCIAS
+========================================================= */
+
+.pericias {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 9px;
+
+}
+
+.pericia {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 70px auto;
+
+    gap: 8px;
+
+    align-items: center;
+
+    padding: 9px;
+
+    background: #111;
+
+    border: 1px solid #252525;
+
+    border-radius: 6px;
+
+}
+
+.pericia-nome {
+
+    font-size: 13px;
+
+}
+
+.pericia input {
+
+    padding: 8px;
+
+    text-align: center;
+
+}
+
+.bonus {
+
+    padding: 4px 6px;
+
+    border-radius: 4px;
+
+    color: var(--ouro-claro);
+
+    background: rgba(214,166,42,.09);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   INVENTÁRIO
+========================================================= */
+
+.item {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 100px 42px;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================================================
+   REGISTROS
+========================================================= */
+
+.registro {
+
+    margin-bottom: 10px;
+
+    padding: 14px;
+
+    border-left: 3px solid var(--ouro);
+
+    border-radius: 5px;
+
+    background: #111;
+
+}
+
+.registro-data {
+
+    color: var(--ouro);
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+
+}
+
+.registro-titulo {
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+}
+
+.registro-descricao {
+
+    color: #aaa;
+
+    white-space: pre-wrap;
+
+    line-height: 1.5;
+
+}
+
+.alteracao {
+
+    padding: 11px 13px;
+
+    margin-bottom: 7px;
+
+    background: #111;
+
+    border: 1px solid #242424;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+}
+
+.alteracao-data {
+
+    margin-bottom: 4px;
+
+    color: #666;
+
+    font-size: 10px;
+
+}
+
+.valor-antigo {
+
+    color: var(--vermelho);
+
+}
+
+.valor-novo {
+
+    color: var(--verde);
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media(max-width: 900px) {
+
+    .status-hud {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media(max-width: 750px) {
+
+    .topo {
+
+        position: relative;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .topo-botoes {
+
+        justify-content: center;
+
+    }
+
+    .imagem-area {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .preview {
+
+        margin: auto;
+
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .status-hud {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .secao {
+
+        padding: 17px;
+
+    }
+
+    .pericia {
+
+        grid-template-columns:
+            1fr 65px;
+
+    }
+
+    .bonus {
+
+        grid-column: 1 / -1;
+
+        text-align: center;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOPO
+========================================================= -->
+
+<nav class="topo">
+
+    <div class="logo">
+        VIPERA
+    </div>
+
+    <div class="topo-botoes">
+
+        <button onclick="salvarJSON()">
+            💾 Salvar ficha
+        </button>
+
+        <button
+            class="secundario"
+            onclick="abrirCarregador()"
+        >
+            📂 Carregar ficha
+        </button>
+
+        <input
+            type="file"
+            id="arquivoJSON"
+            accept=".json"
+            style="display:none"
+            onchange="carregarJSON(event)"
+        >
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     CAPA
+========================================================= -->
+
+<header class="capa">
+
+    <div>
+
+        <h1>VIPERA</h1>
+
+        <p>Registro de Personagem</p>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- =========================================================
+     IDENTIDADE
+========================================================= -->
+
+<section class="secao">
+
+<h2>Identidade</h2>
+
+<div class="imagem-area">
+
+    <div
+        class="preview"
+        id="preview"
+    >
+        Nenhuma imagem
+    </div>
+
+
+    <div>
+
+        <div class="campo">
+
+            <label>
+                Imagem do personagem
+            </label>
+
+            <input
+                type="file"
+                id="imagem"
+                accept="image/*"
+            >
+
+        </div>
+
+        <br>
+
+
+        <div class="grid">
+
+            <div class="campo">
+
+                <label>Nome</label>
+
+                <input
+                    id="nome"
+                    type="text"
+                    placeholder="Nome do personagem"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>Idade</label>
+
+                <input
+                    id="idade"
+                    type="number"
+                    min="0"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>Gênero</label>
+
+                <input
+                    id="genero"
+                    type="text"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>Cargo</label>
+
+                <select id="cargo">
+
+                    <option value="">
+                        Selecione...
+                    </option>
+
+                    <option value="Lutador">
+                        Lutador
+                    </option>
+
+                    <option value="Investigador">
+                        Investigador
+                    </option>
+
+                    <option value="Atirador">
+                        Atirador
+                    </option>
+
+                    <option value="Técnico">
+                        Técnico
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRESSÃO
+========================================================= -->
+
+<section class="secao">
+
+<h2>Progressão</h2>
+
+<div class="grid">
+
+    <div class="campo">
+
+        <label>Level</label>
+
+        <select id="level"></select>
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Pontos</label>
+
+        <input
+            id="pontos"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>XP</label>
+
+        <input
+            id="xp"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ATRIBUTOS
+========================================================= -->
+
+<section class="secao">
+
+<h2>Atributos</h2>
+
+<div class="pontos-info">
+
+    <span>
+        Pontos iniciais:
+        <strong>18</strong>
+    </span>
+
+    <span id="pontosRestantes" class="pontos-restantes">
+        Pontos restantes: 18
+    </span>
+
+</div>
+
+<div
+    id="alertaAtributos"
+    class="alerta"
+>
+    Você ultrapassou os 18 pontos disponíveis para os atributos.
+</div>
+
+
+<div class="grid-atributos">
+
+    <div class="campo">
+
+        <label>Força</label>
+
+        <input
+            id="forca"
+            class="atributo"
+            data-atributo="Força"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Destreza</label>
+
+        <input
+            id="destreza"
+            class="atributo"
+            data-atributo="Destreza"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Inteligência</label>
+
+        <input
+            id="inteligencia"
+            class="atributo"
+            data-atributo="Inteligência"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Vigor</label>
+
+        <input
+            id="vigor"
+            class="atributo"
+            data-atributo="Vigor"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Vontade</label>
+
+        <input
+            id="vontade"
+            class="atributo"
+            data-atributo="Vontade"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Autocontrole</label>
+
+        <input
+            id="autocontrole"
+            class="atributo"
+            data-atributo="Autocontrole"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Carisma</label>
+
+        <input
+            id="carisma"
+            class="atributo"
+            data-atributo="Carisma"
+            type="number"
+            min="0"
+            value="0"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ESTADO
+========================================================= -->
+
+<section class="secao">
+
+<h2>Estado</h2>
+
+
+<div class="status-hud">
+
+
+    <!-- PV -->
+
+    <div class="status-card pv">
+
+        <div class="status-topo">
+
+            <div class="status-nome">
+                Pontos de Vida
+            </div>
+
+        </div>
+
+        <div
+            class="status-valor"
+            id="pvTexto"
+        >
+            40 / 40
+        </div>
+
+        <div class="barra">
+
+            <div
+                class="barra-preenchimento"
+                id="pvBarra"
+                style="width:100%"
+            ></div>
+
+        </div>
+
+        <div class="status-controles">
+
+            <input
+                id="vida"
+                type="number"
+                min="0"
+                value="40"
+                placeholder="Atual"
+            >
+
+            <input
+                id="vidaMax"
+                type="number"
+                min="1"
+                value="40"
+                placeholder="Máximo"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- LIMITE -->
+
+    <div class="status-card limite">
+
+        <div class="status-topo">
+
+            <div class="status-nome">
+                Limite
+            </div>
+
+        </div>
+
+        <div
+            class="status-valor"
+            id="limiteTexto"
+        >
+            0 / 100
+        </div>
+
+        <div class="barra">
+
+            <div
+                class="barra-preenchimento"
+                id="limiteBarra"
+                style="width:0%"
+            ></div>
+
+        </div>
+
+        <div class="status-controles">
+
+            <input
+                id="limite"
+                type="number"
+                min="0"
+                max="100"
+                value="0"
+                placeholder="Atual"
+            >
+
+            <input
+                type="text"
+                value="Máx. 100"
+                readonly
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- SANIDADE -->
+
+    <div class="status-card sanidade">
+
+        <div class="status-topo">
+
+            <div class="status-nome">
+                Sanidade
+            </div>
+
+        </div>
+
+        <div
+            class="status-valor"
+            id="sanidadeTexto"
+        >
+            100 / 100
+        </div>
+
+        <div class="barra">
+
+            <div
+                class="barra-preenchimento"
+                id="sanidadeBarra"
+                style="width:100%"
+            ></div>
+
+        </div>
+
+        <div class="status-controles">
+
+            <input
+                id="sanidade"
+                type="number"
+                min="0"
+                max="100"
+                value="100"
+                placeholder="Atual"
+            >
+
+            <input
+                type="text"
+                value="Máx. 100"
+                readonly
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="subtitulo">
+    Ferimentos
+</div>
+
+<div class="campo">
+
+    <textarea
+        id="ferimentos"
+        placeholder="Descreva ferimentos, lesões ou efeitos físicos..."
+    ></textarea>
+
+</div>
+
+
+<div class="grid">
+
+    <div class="campo">
+
+        <label>Sangramento</label>
+
+        <select id="sangramento">
+
+            <option value="1">1 — Leve</option>
+            <option value="2">2 — Moderado</option>
+            <option value="3">3 — Grave</option>
+            <option value="4">4 — Crítico</option>
+            <option value="5">5 — Extremo</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PERÍCIAS
+========================================================= -->
+
+<section class="secao">
+
+<h2>Perícias</h2>
+
+<div class="pericias" id="pericias"></div>
+
+</section>
+
+
+<!-- =========================================================
+     INVENTÁRIO
+========================================================= -->
+
+<section class="secao">
+
+<h2>Inventário</h2>
+
+
+<div class="grid">
+
+    <div class="campo">
+
+        <label>Peso atual</label>
+
+        <input
+            id="pesoAtual"
+            type="number"
+            min="0"
+            step="0.1"
+            value="0"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Peso máximo</label>
+
+        <input
+            id="pesoMaximo"
+            type="number"
+            min="0"
+            step="0.1"
+            value="0"
+        >
+
+    </div>
+
+</div>
+
+
+<div class="subtitulo">
+    Itens
+</div>
+
+
+<div id="inventario"></div>
+
+
+<button
+    type="button"
+    class="secundario"
+    onclick="adicionarItem()"
+>
+    + Adicionar item
+</button>
+
+</section>
+
+
+<!-- =========================================================
+     ANOTAÇÕES
+========================================================= -->
+
+<section class="secao">
+
+<h2>Anotações</h2>
+
+<div class="campo">
+
+    <textarea
+        id="anotacoes"
+        placeholder="Anotações gerais sobre o personagem..."
+    ></textarea>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     REGISTROS
+========================================================= -->
+
+<section class="secao">
+
+<h2>Registros</h2>
+
+
+<div class="subtitulo">
+    Registro de personagem
+</div>
+
+
+<div class="grid">
+
+    <div class="campo">
+
+        <label>Título</label>
+
+        <input
+            id="registroTitulo"
+            type="text"
+            placeholder="Título do registro"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>Descrição</label>
+
+        <textarea
+            id="registroDescricao"
+            placeholder="Descreva o acontecimento..."
+        ></textarea>
+
+    </div>
+
+</div>
+
+
+<br>
+
+<button
+    type="button"
+    onclick="adicionarRegistro()"
+>
+    Adicionar registro
+</button>
+
+
+<div
+    id="registros"
+    style="margin-top:20px;"
+></div>
+
+
+<div class="subtitulo">
+    Histórico de alterações
+</div>
+
+
+<div id="historicoAlteracoes"></div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+const levelSelect =
+    document.getElementById("level");
+
+for(let i = 1; i <= 50; i++){
+
+    const option =
+        document.createElement("option");
+
+    option.value = i;
+    option.textContent = i;
+
+    levelSelect.appendChild(option);
+
+}
+
+
+/* =========================================================
+   PERÍCIAS
+========================================================= */
+
+const listaPericias = [
+
+    "Reflexos",
+    "Atletismo",
+    "Investigação",
+    "Percepção",
+    "Furtividade",
+    "Armas Brancas",
+    "Luta",
+    "Resistência",
+    "Sobrevivência",
+    "Medicina",
+    "Tecnologia",
+    "Armas de Fogo",
+    "Conhecimento",
+    "Intuição",
+    "Concentração",
+    "Enganação",
+    "Intimidação",
+    "Liderança",
+    "Armas Improvisadas",
+    "Negociação",
+    "Pontaria",
+    "Artes Marciais",
+    "Ciências"
+
+];
+
+
+const periciasContainer =
+    document.getElementById("pericias");
+
+
+listaPericias.forEach((nome, index) => {
+
+    const div =
+        document.createElement("div");
+
+    div.className = "pericia";
+
+    div.dataset.pericia = nome;
+
+    div.innerHTML = `
+
+        <div class="pericia-nome">
+            ${nome}
+        </div>
+
+        <input
+            type="number"
+            min="0"
+            value="0"
+            class="valor-pericia"
+            data-pericia="${nome}"
+        >
+
+        <div
+            class="bonus"
+            id="bonus-${index}"
+        >
+            +0
+        </div>
+
+    `;
+
+    periciasContainer.appendChild(div);
+
+});
+
+
+/* =========================================================
+   CARGOS
+========================================================= */
+
+const cargos = {
+
+    "Lutador": {
+
+        vida: 40,
+
+        bonus: {
+            "Artes Marciais": 2,
+            "Luta": 2
+        }
+
+    },
+
+    "Investigador": {
+
+        vida: 25,
+
+        bonus: {
+            "Investigação": 2,
+            "Percepção": 2
+        }
+
+    },
+
+    "Atirador": {
+
+        vida: 30,
+
+        bonus: {
+            "Pontaria": 2,
+            "Armas de Fogo": 2
+        }
+
+    },
+
+    "Técnico": {
+
+        vida: 20,
+
+        bonus: {
+            "Tecnologia": 2,
+            "Ciências": 2
+        }
+
+    }
+
+};
+
+
+/* =========================================================
+   ATRIBUTOS
+========================================================= */
+
+const atributos =
+    document.querySelectorAll(".atributo");
+
+
+atributos.forEach(input => {
+
+    input.addEventListener(
+        "input",
+        () => {
+
+            atualizarPontos();
+
+            atualizarVida();
+
+            registrarAlteracao(
+                input.dataset.atributo,
+                input.dataset.atributo,
+                input.value
+            );
+
+        }
+    );
+
+});
+
+
+function atualizarPontos(){
+
+    let total = 0;
+
+    atributos.forEach(input => {
+
+        let valor =
+            parseInt(input.value) || 0;
+
+        if(valor < 0){
+
+            valor = 0;
+            input.value = 0;
+
+        }
+
+        total += valor;
+
+    });
+
+
+    const restante = 18 - total;
+
+    const elemento =
+        document.getElementById(
+            "pontosRestantes"
+        );
+
+    const alerta =
+        document.getElementById(
+            "alertaAtributos"
+        );
+
+
+    if(restante < 0){
+
+        elemento.textContent =
+            `Pontos excedidos: ${Math.abs(restante)}`;
+
+        elemento.className =
+            "pontos-excedidos";
+
+        alerta.style.display =
+            "block";
+
+    } else {
+
+        elemento.textContent =
+            `Pontos restantes: ${restante}`;
+
+        elemento.className =
+            "pontos-restantes";
+
+        alerta.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =========================================================
+   VIDA
+========================================================= */
+
+function calcularVidaMaxima(){
+
+    const cargo =
+        document.getElementById("cargo").value;
+
+    const vigor =
+        parseInt(
+            document.getElementById("vigor").value
+        ) || 0;
+
+
+    const vidaInicial =
+        cargos[cargo]?.vida || 0;
+
+
+    return (
+        vidaInicial +
+        (vigor * 8) +
+        (vigor * vigor)
+    );
+
+}
+
+
+function atualizarVida(){
+
+    const vidaMax =
+        calcularVidaMaxima();
+
+    const vidaMaxInput =
+        document.getElementById("vidaMax");
+
+    const vidaInput =
+        document.getElementById("vida");
+
+
+    const vidaAnterior =
+        parseInt(vidaInput.value) || 0;
+
+
+    vidaMaxInput.value =
+        vidaMax;
+
+
+    if(
+        vidaAnterior === 0 ||
+        vidaAnterior > vidaMax
+    ){
+
+        vidaInput.value =
+            vidaMax;
+
+    }
+
+
+    atualizarHUD();
+
+}
+
+
+/* =========================================================
+   CARGO
+========================================================= */
+
+document
+    .getElementById("cargo")
+    .addEventListener(
+        "change",
+        function(){
+
+            atualizarCargo();
+
+        }
+    );
+
+
+function atualizarCargo(){
+
+    const cargo =
+        document.getElementById("cargo").value;
+
+
+    const config =
+        cargos[cargo];
+
+
+    document
+        .querySelectorAll(".bonus")
+        .forEach(elemento => {
+
+            elemento.textContent =
+                "+0";
+
+        });
+
+
+    if(config){
+
+        Object.entries(config.bonus)
+            .forEach(
+                ([pericia, valor]) => {
+
+                    const elemento =
+                        document.querySelector(
+                            `.bonus[data-pericia="${pericia}"]`
+                        );
+
+
+                    /*
+                     * Caso o bônus não encontre
+                     * o elemento, procuramos
+                     * diretamente pelo nome.
+                     */
+
+                    const periciaInput =
+                        document.querySelector(
+                            `.valor-pericia[data-pericia="${pericia}"]`
+                        );
+
+
+                    if(periciaInput){
+
+                        const pai =
+                            periciaInput.closest(
+                                ".pericia"
+                            );
+
+                        const bonus =
+                            pai.querySelector(
+                                ".bonus"
+                            );
+
+                        bonus.textContent =
+                            `+${valor}`;
+
+                    }
+
+                }
+            );
+
+    }
+
+
+    atualizarVida();
+
+}
+
+
+/* =========================================================
+   HUD
+========================================================= */
+
+function atualizarHUD(){
+
+    const vida =
+        Number(
+            document.getElementById("vida").value
+        ) || 0;
+
+    const vidaMax =
+        Number(
+            document.getElementById("vidaMax").value
+        ) || 1;
+
+
+    const limite =
+        Number(
+            document.getElementById("limite").value
+        ) || 0;
+
+
+    const sanidade =
+        Number(
+            document.getElementById("sanidade").value
+        ) || 0;
+
+
+    document.getElementById(
+        "pvTexto"
+    ).textContent =
+        `${vida} / ${vidaMax}`;
+
+
+    document.getElementById(
+        "limiteTexto"
+    ).textContent =
+        `${limite} / 100`;
+
+
+    document.getElementById(
+        "sanidadeTexto"
+    ).textContent =
+        `${sanidade} / 100`;
+
+
+    document.getElementById(
+        "pvBarra"
+    ).style.width =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                (vida / vidaMax) * 100
+            )
+        ) + "%";
+
+
+    document.getElementById(
+        "limiteBarra"
+    ).style.width =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                limite
+            )
+        ) + "%";
+
+
+    document.getElementById(
+        "sanidadeBarra"
+    ).style.width =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                sanidade
+            )
+        ) + "%";
+
+}
+
+
+/* =========================================================
+   CAMPOS DO HUD
+========================================================= */
+
+[
+    "vida",
+    "vidaMax",
+    "limite",
+    "sanidade"
+].forEach(id => {
+
+    document
+        .getElementById(id)
+        .addEventListener(
+            "input",
+            atualizarHUD
+        );
+
+});
+
+
+/* =========================================================
+   INVENTÁRIO
+========================================================= */
+
+let itens = [];
+
+
+function adicionarItem(
+    nome = "",
+    peso = ""
+){
+
+    itens.push({
+
+        nome,
+        peso
+
+    });
+
+
+    renderizarInventario();
+
+}
+
+
+function removerItem(index){
+
+    itens.splice(
+        index,
+        1
+    );
+
+
+    renderizarInventario();
+
+}
+
+
+function renderizarInventario(){
+
+    const container =
+        document.getElementById(
+            "inventario"
+        );
+
+
+    container.innerHTML = "";
+
+
+    itens.forEach(
+        (item, index) => {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "item";
+
+
+            div.innerHTML = `
+
+                <input
+                    type="text"
+                    placeholder="Nome do item"
+                    value="${escapeHTML(item.nome)}"
+                    oninput="itens[${index}].nome=this.value"
+                >
+
+                <input
+                    type="number"
+                    min="0"
+                    step="0.1"
+                    placeholder="Peso"
+                    value="${item.peso}"
+                    oninput="itens[${index}].peso=this.value"
+                >
+
+                <button
+                    type="button"
+                    class="perigo"
+                    onclick="removerItem(${index})"
+                >
+                    ×
+                </button>
+
+            `;
+
+
+            container.appendChild(div);
+
+        }
+    );
+
+}
+
+
+function escapeHTML(text){
+
+    return String(text)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+/* =========================================================
+   REGISTROS
+========================================================= */
+
+let registros = [];
+
+
+function adicionarRegistro(){
+
+    const titulo =
+        document.getElementById(
+            "registroTitulo"
+        ).value.trim();
+
+
+    const descricao =
+        document.getElementById(
+            "registroDescricao"
+        ).value.trim();
+
+
+    if(!titulo && !descricao){
+
+        return;
+
+    }
+
+
+    registros.push({
+
+        data:
+            new Date().toLocaleString(
+                "pt-BR"
+            ),
+
+        titulo,
+
+        descricao
+
+    });
+
+
+    document.getElementById(
+        "registroTitulo"
+    ).value = "";
+
+
+    document.getElementById(
+        "registroDescricao"
+    ).value = "";
+
+
+    renderizarRegistros();
+
+}
+
+
+function renderizarRegistros(){
+
+    const container =
+        document.getElementById(
+            "registros"
+        );
+
+
+    container.innerHTML = "";
+
+
+    registros
+        .slice()
+        .reverse()
+        .forEach(
+            registro => {
+
+                const div =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                div.className =
+                    "registro";
+
+
+                div.innerHTML = `
+
+                    <div class="registro-data">
+                        ${escapeHTML(registro.data)}
+
+                        ${escapeHTML(registro.data)}
+                    </div>
+
+                    <div class="registro-titulo">
+                        ${escapeHTML(registro.titulo)}
+                    </div>
+
+                    <div class="registro-descricao">
+                        ${escapeHTML(registro.descricao)}
+                    </div>
+
+                `;
+
+                container.appendChild(div);
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   HISTÓRICO DE ALTERAÇÕES
+========================================================= */
+
+let historico = [];
+
+
+function registrarAlteracao(
+    campo,
+    antigo,
+    novo
+){
+
+    if(String(antigo) === String(novo)){
+        return;
+    }
+
+    historico.push({
+
+        data:
+            new Date().toLocaleString(
+                "pt-BR"
+            ),
+
+        campo,
+
+        antigo,
+
+        novo
+
+    });
+
+
+    renderizarHistorico();
+
+}
+
+
+function renderizarHistorico(){
+
+    const container =
+        document.getElementById(
+            "historicoAlteracoes"
+        );
+
+
+    container.innerHTML = "";
+
+
+    historico
+        .slice()
+        .reverse()
+        .forEach(
+            alteracao => {
+
+                const div =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                div.className =
+                    "alteracao";
+
+
+                div.innerHTML = `
+
+                    <div class="alteracao-data">
+                        ${escapeHTML(alteracao.data)}
+                    </div>
+
+                    <strong>
+                        ${escapeHTML(alteracao.campo)}
+                    </strong>
+
+                    <div style="margin-top:6px;">
+
+                        <span class="valor-antigo">
+                            ${escapeHTML(String(alteracao.antigo))}
+                        </span>
+
+                        <span style="color:#555;">
+                            →
+                        </span>
+
+                        <span class="valor-novo">
+                            ${escapeHTML(String(alteracao.novo))}
+                        </span>
+
+                    </div>
+
+                `;
+
+
+                container.appendChild(div);
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   IMAGEM DO PERSONAGEM
+========================================================= */
+
+document
+    .getElementById("imagem")
+    .addEventListener(
+        "change",
+        function(event){
+
+            const arquivo =
+                event.target.files[0];
+
+            if(!arquivo){
+                return;
+            }
+
+
+            const leitor =
+                new FileReader();
+
+
+            leitor.onload =
+                function(e){
+
+                    const preview =
+                        document.getElementById(
+                            "preview"
+                        );
+
+
+                    preview.innerHTML = `
+
+                        <img
+                            src="${e.target.result}"
+                            alt="Imagem do personagem"
+                        >
+
+                    `;
+
+                };
+
+
+            leitor.readAsDataURL(arquivo);
+
+        }
+    );
+
+
+/* =========================================================
+   SALVAR FICHA — JSON
+========================================================= */
+
+function salvarJSON(){
+
+    const dados = {
+
+        versao: "VIPERA-1.0",
+
+        identidade: {
+
+            nome:
+                document.getElementById(
+                    "nome"
+                ).value,
+
+            idade:
+                document.getElementById(
+                    "idade"
+                ).value,
+
+            genero:
+                document.getElementById(
+                    "genero"
+                ).value,
+
+            cargo:
+                document.getElementById(
+                    "cargo"
+                ).value,
+
+            imagem:
+                document
+                    .getElementById("preview")
+                    .querySelector("img")
+                    ?.src || ""
+
+        },
+
+
+        progressao: {
+
+            level:
+                document.getElementById(
+                    "level"
+                ).value,
+
+            pontos:
+                document.getElementById(
+                    "pontos"
+                ).value,
+
+            xp:
+                document.getElementById(
+                    "xp"
+                ).value
+
+        },
+
+
+        atributos: {},
+
+
+        estado: {
+
+            vida:
+                document.getElementById(
+                    "vida"
+                ).value,
+
+            vidaMax:
+                document.getElementById(
+                    "vidaMax"
+                ).value,
+
+            limite:
+                document.getElementById(
+                    "limite"
+                ).value,
+
+            sanidade:
+                document.getElementById(
+                    "sanidade"
+                ).value,
+
+            ferimentos:
+                document.getElementById(
+                    "ferimentos"
+                ).value,
+
+            sangramento:
+                document.getElementById(
+                    "sangramento"
+                ).value
+
+        },
+
+
+        pericias: {},
+
+
+        inventario: {
+
+            pesoAtual:
+                document.getElementById(
+                    "pesoAtual"
+                ).value,
+
+            pesoMaximo:
+                document.getElementById(
+                    "pesoMaximo"
+                ).value,
+
+            itens:
+                itens
+
+        },
+
+
+        anotacoes:
+            document.getElementById(
+                "anotacoes"
+            ).value,
+
+
+        registros:
+            registros,
+
+
+        historico:
+            historico
+
+    };
+
+
+    atributos.forEach(
+        input => {
+
+            dados.atributos[
+                input.dataset.atributo
+            ] = input.value;
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".valor-pericia")
+        .forEach(
+            input => {
+
+                dados.pericias[
+                    input.dataset.pericia
+                ] = input.value;
+
+            }
+        );
+
+
+    const json =
+        JSON.stringify(
+            dados,
+            null,
+            4
+        );
+
+
+    const blob =
+        new Blob(
+            [json],
+            {
+                type:
+                    "application/json"
+            }
+        );
+
+
+    const url =
+        URL.createObjectURL(blob);
+
+
+    const link =
+        document.createElement("a");
+
+
+    link.href = url;
+
+    link.download =
+        `${dados.identidade.nome || "ficha-vipera"}.json`;
+
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+
+}
+
+
+/* =========================================================
+   CARREGAR FICHA — JSON
+========================================================= */
+
+function abrirCarregador(){
+
+    document
+        .getElementById(
+            "arquivoJSON"
+        )
+        .click();
+
+}
+
+
+function carregarJSON(event){
+
+    const arquivo =
+        event.target.files[0];
+
+
+    if(!arquivo){
+        return;
+    }
+
+
+    const leitor =
+        new FileReader();
+
+
+    leitor.onload =
+        function(e){
+
+            try {
+
+                const dados =
+                    JSON.parse(
+                        e.target.result
+                    );
+
+
+                preencherFicha(
+                    dados
+                );
+
+
+            } catch(erro){
+
+                alert(
+                    "Não foi possível carregar esta ficha. O arquivo JSON pode estar inválido."
+                );
+
+                console.error(
+                    erro
+                );
+
+            }
+
+        };
+
+
+    leitor.readAsText(
+        arquivo
+    );
+
+
+    event.target.value = "";
+
+}
+
+
+/* =========================================================
+   PREENCHER FICHA
+========================================================= */
+
+function preencherFicha(dados){
+
+    /* IDENTIDADE */
+
+    if(dados.identidade){
+
+        document.getElementById(
+            "nome"
+        ).value =
+            dados.identidade.nome || "";
+
+
+        document.getElementById(
+            "idade"
+        ).value =
+            dados.identidade.idade || "";
+
+
+        document.getElementById(
+            "genero"
+        ).value =
+            dados.identidade.genero || "";
+
+
+        document.getElementById(
+            "cargo"
+        ).value =
+            dados.identidade.cargo || "";
+
+    }
+
+
+    /* PROGRESSÃO */
+
+    if(dados.progressao){
+
+        document.getElementById(
+            "level"
+        ).value =
+            dados.progressao.level || 1;
+
+
+        document.getElementById(
+            "pontos"
+        ).value =
+            dados.progressao.pontos || 0;
+
+
+        document.getElementById(
+            "xp"
+        ).value =
+            dados.progressao.xp || 0;
+
+    }
+
+
+    /* ATRIBUTOS */
+
+    if(dados.atributos){
+
+        atributos.forEach(
+            input => {
+
+                input.value =
+                    dados.atributos[
+                        input.dataset.atributo
+                    ] ?? 0;
+
+            }
+        );
+
+    }
+
+
+    /* ESTADO */
+
+    if(dados.estado){
+
+        document.getElementById(
+            "vida"
+        ).value =
+            dados.estado.vida ?? 0;
+
+
+        document.getElementById(
+            "vidaMax"
+        ).value =
+            dados.estado.vidaMax ?? 0;
+
+
+        document.getElementById(
+            "limite"
+        ).value =
+            dados.estado.limite ?? 0;
+
+
+        document.getElementById(
+            "sanidade"
+        ).value =
+            dados.estado.sanidade ?? 100;
+
+
+        document.getElementById(
+            "ferimentos"
+        ).value =
+            dados.estado.ferimentos || "";
+
+
+        document.getElementById(
+            "sangramento"
+        ).value =
+            dados.estado.sangramento || 1;
+
+    }
+
+
+    /* PERÍCIAS */
+
+    if(dados.pericias){
+
+        document
+            .querySelectorAll(
+                ".valor-pericia"
+            )
+            .forEach(
+                input => {
+
+                    input.value =
+                        dados.pericias[
+                            input.dataset.pericia
+                        ] ?? 0;
+
+                }
+            );
+
+    }
+
+
+    /* INVENTÁRIO */
+
+    if(dados.inventario){
+
+        document.getElementById(
+            "pesoAtual"
+        ).value =
+            dados.inventario.pesoAtual ?? 0;
+
+
+        document.getElementById(
+            "pesoMaximo"
+        ).value =
+            dados.inventario.pesoMaximo ?? 0;
+
+
+        itens =
+            Array.isArray(
+                dados.inventario.itens
+            )
+            ? dados.inventario.itens
+            : [];
+
+
+        renderizarInventario();
+
+    }
+
+
+    /* ANOTAÇÕES */
+
+    document.getElementById(
+        "anotacoes"
+    ).value =
+        dados.anotacoes || "";
+
+
+    /* REGISTROS */
+
+    registros =
+        Array.isArray(
+            dados.registros
+        )
+        ? dados.registros
+        : [];
+
+
+    renderizarRegistros();
+
+
+    /* HISTÓRICO */
+
+    historico =
+        Array.isArray(
+            dados.historico
+        )
+        ? dados.historico
+        : [];
+
+
+    renderizarHistorico();
+
+
+    /* ATUALIZAÇÕES */
+
+    atualizarPontos();
+
+    atualizarCargo();
+
+    atualizarHUD();
+
+
+    /* IMAGEM */
+
+    if(
+        dados.identidade &&
+        dados.identidade.imagem
+    ){
+
+        document.getElementById(
+            "preview"
+        ).innerHTML = `
+
+            <img
+                src="${dados.identidade.imagem}"
+                alt="Imagem do personagem"
+            >
+
+        `;
+
+    }
+
+
+    alert(
+        "Ficha carregada com sucesso."
+    );
+
+}
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+atualizarPontos();
+
+atualizarCargo();
+
+atualizarHUD();
+
+renderizarInventario();
+
+renderizarRegistros();
+
+renderizarHistorico();
+
+</script>
+
+</body>
+
+</html>
