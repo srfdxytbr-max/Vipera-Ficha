@@ -4852,65 +4852,39 @@ function coletarFicha() {
 
 function salvarJSON() {
 
-    const ficha =
-        coletarFicha();
+    const ficha = coletarFicha();
 
+    const conteudo = JSON.stringify(
+        ficha,
+        null,
+        4
+    );
 
-    const conteudo =
-        JSON.stringify(
-            ficha,
-            null,
-            4
-        );
+    const arquivo = new File(
+        [conteudo],
+        "VIPERA-ficha.json",
+        {
+            type: "application/json"
+        }
+    );
 
+    const url = URL.createObjectURL(arquivo);
 
-    const blob =
-        new Blob(
-            [conteudo],
-            {
-                type:
-                    "application/json"
-            }
-        );
+    const link = document.createElement("a");
 
+    link.href = url;
+    link.download = "VIPERA-ficha.json";
 
-    const url =
-        URL.createObjectURL(
-            blob
-        );
-
-
-    const link =
-        document.createElement(
-            "a"
-        );
-
-
-    const nome =
-        document.getElementById(
-            "nome"
-        ).value.trim();
-
-
-    link.href =
-        url;
-
-
-    link.download =
-        nome
-            ? `VIPERA-${nome}.json`
-            : "VIPERA-ficha.json";
-
+    document.body.appendChild(link);
 
     link.click();
 
+    document.body.removeChild(link);
 
-    URL.revokeObjectURL(
-        url
-    );
-
+    setTimeout(() => {
+        URL.revokeObjectURL(url);
+    }, 1000);
 }
-
 
 /* =========================================================
    CARREGAR JSON
