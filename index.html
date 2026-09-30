@@ -3,7 +3,6 @@
 
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VIPERA — Ficha de Personagem</title>
@@ -13,7 +12,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
-
     --ouro: #d6a62a;
     --ouro-claro: #f2cc58;
     --ouro-escuro: #9d7617;
@@ -31,7 +29,6 @@
     --vermelho: #d95757;
     --verde: #68bd70;
     --azul: #5899d8;
-
 }
 
 * {
@@ -43,11 +40,8 @@ html {
 }
 
 body {
-
     margin: 0;
-
     color: var(--texto);
-
     font-family: "Inter", sans-serif;
 
     background:
@@ -58,13 +52,10 @@ body {
         url("https://giffiles.alphacoders.com/142/142355.gif");
 
     background-size: cover;
-
     background-position: center;
-
     background-attachment: fixed;
 
     min-height: 100vh;
-
 }
 
 
@@ -73,53 +64,38 @@ body {
 ========================================================= */
 
 .topo {
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 20px;
-
     padding: 14px 25px;
 
     background: rgba(7,7,7,.94);
-
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid var(--borda);
-
 }
 
 .logo {
-
     color: var(--ouro-claro);
 
     font-family: "Playfair Display", serif;
 
     font-size: 25px;
-
     font-weight: 700;
 
     letter-spacing: 4px;
-
 }
 
 .topo-botoes {
-
     display: flex;
-
     gap: 8px;
-
     flex-wrap: wrap;
-
 }
 
 
@@ -128,11 +104,8 @@ body {
 ========================================================= */
 
 button {
-
     border: 1px solid var(--ouro);
-
     background: var(--ouro);
-
     color: #080808;
 
     padding: 10px 15px;
@@ -140,39 +113,27 @@ button {
     border-radius: 6px;
 
     font-family: inherit;
-
     font-weight: 700;
 
     cursor: pointer;
 
     transition: .2s;
-
 }
 
 button:hover {
-
     background: var(--ouro-claro);
-
     transform: translateY(-1px);
-
 }
 
 button.secundario {
-
     background: transparent;
-
     color: var(--ouro-claro);
-
 }
 
 button.perigo {
-
     border-color: var(--vermelho);
-
     background: transparent;
-
     color: var(--vermelho);
-
 }
 
 
@@ -181,13 +142,10 @@ button.perigo {
 ========================================================= */
 
 .capa {
-
     min-height: 260px;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
@@ -199,11 +157,9 @@ button.perigo {
             rgba(0,0,0,.35),
             rgba(0,0,0,.8)
         );
-
 }
 
 .capa h1 {
-
     margin: 0;
 
     color: var(--ouro-claro);
@@ -216,11 +172,9 @@ button.perigo {
 
     text-shadow:
         0 0 30px rgba(214,166,42,.25);
-
 }
 
 .capa p {
-
     margin-top: 10px;
 
     color: #aaa;
@@ -228,7 +182,6 @@ button.perigo {
     letter-spacing: 5px;
 
     text-transform: uppercase;
-
 }
 
 
@@ -237,11 +190,9 @@ button.perigo {
 ========================================================= */
 
 .container {
-
     width: min(1200px, 94%);
 
     margin: 30px auto 80px;
-
 }
 
 
@@ -250,7 +201,6 @@ button.perigo {
 ========================================================= */
 
 .secao {
-
     margin-bottom: 22px;
 
     padding: 25px;
@@ -263,11 +213,9 @@ button.perigo {
 
     box-shadow:
         0 12px 35px rgba(0,0,0,.35);
-
 }
 
 .secao h2 {
-
     margin: 0 0 20px;
 
     padding-bottom: 12px;
@@ -279,17 +227,14 @@ button.perigo {
     font-family: "Playfair Display", serif;
 
     font-size: 25px;
-
 }
 
 .subtitulo {
-
     margin: 25px 0 12px;
 
     color: var(--ouro);
 
     font-weight: 700;
-
 }
 
 
@@ -298,25 +243,21 @@ button.perigo {
 ========================================================= */
 
 .grid {
-
     display: grid;
 
     grid-template-columns:
         repeat(auto-fit, minmax(210px, 1fr));
 
     gap: 14px;
-
 }
 
 .grid-atributos {
-
     display: grid;
 
     grid-template-columns:
         repeat(auto-fit, minmax(150px, 1fr));
 
     gap: 12px;
-
 }
 
 
@@ -325,29 +266,21 @@ button.perigo {
 ========================================================= */
 
 .campo {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 7px;
-
 }
 
 label {
-
     color: #cfcfcf;
 
     font-size: 13px;
-
     font-weight: 600;
-
 }
 
 input,
 select,
 textarea {
-
     width: 100%;
 
     padding: 11px 12px;
@@ -357,7 +290,6 @@ textarea {
     border: 1px solid #303030;
 
     background: #111;
-
     color: white;
 
     outline: none;
@@ -365,26 +297,20 @@ textarea {
     font-family: inherit;
 
     transition: .2s;
-
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-
     border-color: var(--ouro);
 
     box-shadow:
         0 0 0 2px rgba(214,166,42,.08);
-
 }
 
 textarea {
-
     min-height: 120px;
-
     resize: vertical;
-
 }
 
 
@@ -393,7 +319,6 @@ textarea {
 ========================================================= */
 
 .imagem-area {
-
     display: grid;
 
     grid-template-columns:
@@ -402,19 +327,14 @@ textarea {
     gap: 25px;
 
     align-items: center;
-
 }
 
 .preview {
-
     width: 180px;
-
     height: 230px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
@@ -428,26 +348,21 @@ textarea {
     color: #555;
 
     text-align: center;
-
 }
 
 .preview img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
-
 }
 
 
 /* =========================================================
-   PONTOS
+   PONTOS DE ATRIBUTO
 ========================================================= */
 
 .pontos-info {
-
     display: flex;
 
     justify-content: space-between;
@@ -465,27 +380,19 @@ textarea {
     border: 1px solid #292929;
 
     border-radius: 7px;
-
 }
 
 .pontos-restantes {
-
     color: var(--verde);
-
     font-weight: 700;
-
 }
 
 .pontos-excedidos {
-
     color: var(--vermelho);
-
     font-weight: 700;
-
 }
 
 .alerta {
-
     display: none;
 
     margin-bottom: 15px;
@@ -499,28 +406,23 @@ textarea {
     background: rgba(217,83,83,.08);
 
     color: #ff8585;
-
 }
 
 
 /* =========================================================
-   HUD VIPERA — PV / LIMITE / SANIDADE
+   HUD
 ========================================================= */
 
 .status-hud {
-
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
     gap: 18px;
-
 }
 
-
 .status-card {
-
     position: relative;
 
     min-height: 165px;
@@ -548,20 +450,15 @@ textarea {
         border-color .25s ease,
         transform .25s ease,
         box-shadow .25s ease;
-
 }
 
-
 .status-card::before {
-
     content: "";
 
     position: absolute;
 
     top: 0;
-
     left: 18px;
-
     right: 18px;
 
     height: 1px;
@@ -573,20 +470,15 @@ textarea {
             rgba(214,166,42,.65),
             transparent
         );
-
 }
 
-
 .status-card::after {
-
     content: "";
 
     position: absolute;
 
     top: 20px;
-
     bottom: 20px;
-
     left: 0;
 
     width: 2px;
@@ -598,12 +490,9 @@ textarea {
             var(--ouro),
             transparent
         );
-
 }
 
-
 .status-card:hover {
-
     transform: translateY(-2px);
 
     border-color:
@@ -613,31 +502,20 @@ textarea {
         inset 0 1px 0 rgba(255,255,255,.04),
         0 15px 38px rgba(0,0,0,.45),
         0 0 22px rgba(214,166,42,.035);
-
 }
 
-
-/* =========================================================
-   CABEÇALHO DO STATUS
-========================================================= */
-
 .status-topo {
-
     display: flex;
 
     align-items: flex-start;
-
     justify-content: space-between;
 
     gap: 15px;
 
     margin-bottom: 18px;
-
 }
 
-
 .status-nome {
-
     position: relative;
 
     padding-left: 12px;
@@ -651,22 +529,17 @@ textarea {
     letter-spacing: 3px;
 
     text-transform: uppercase;
-
 }
 
-
 .status-nome::before {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     top: 50%;
 
     width: 4px;
-
     height: 4px;
 
     transform:
@@ -677,16 +550,9 @@ textarea {
 
     box-shadow:
         0 0 7px rgba(214,166,42,.55);
-
 }
 
-
-/* =========================================================
-   VALOR PRINCIPAL
-========================================================= */
-
 .status-valor {
-
     color: #f2f2f2;
 
     font-family:
@@ -700,19 +566,9 @@ textarea {
     line-height: 1;
 
     letter-spacing: .5px;
-
-    text-shadow:
-        0 0 15px rgba(255,255,255,.04);
-
 }
 
-
-/* =========================================================
-   BARRA
-========================================================= */
-
 .barra {
-
     position: relative;
 
     height: 6px;
@@ -724,35 +580,13 @@ textarea {
     background:
         rgba(255,255,255,.055);
 
-    border: 1px solid
-        rgba(255,255,255,.045);
+    border:
+        1px solid rgba(255,255,255,.045);
 
     border-radius: 20px;
-
 }
-
-
-.barra::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.035),
-            transparent
-        );
-
-}
-
 
 .barra-preenchimento {
-
     position: relative;
 
     height: 100%;
@@ -763,23 +597,19 @@ textarea {
 
     transition:
         width .35s cubic-bezier(.4,0,.2,1);
-
 }
 
 
 /* =========================================================
-   CORES DOS STATUS
+   CORES HUD
 ========================================================= */
 
 .status-card.pv {
-
     border-color:
         rgba(170,65,65,.22);
-
 }
 
 .status-card.pv::before {
-
     background:
         linear-gradient(
             90deg,
@@ -787,11 +617,9 @@ textarea {
             rgba(190,72,72,.65),
             transparent
         );
-
 }
 
 .status-card.pv::after {
-
     background:
         linear-gradient(
             180deg,
@@ -799,12 +627,10 @@ textarea {
             #a94747,
             transparent
         );
-
 }
 
 .status-card.pv
 .barra-preenchimento {
-
     background:
         linear-gradient(
             90deg,
@@ -814,24 +640,15 @@ textarea {
 
     box-shadow:
         0 0 10px rgba(193,90,90,.28);
-
 }
 
-
-/* =========================================================
-   LIMITE
-========================================================= */
-
 .status-card.limite {
-
     border-color:
         rgba(214,166,42,.24);
-
 }
 
 .status-card.limite
 .barra-preenchimento {
-
     background:
         linear-gradient(
             90deg,
@@ -841,23 +658,14 @@ textarea {
 
     box-shadow:
         0 0 11px rgba(214,166,42,.32);
-
 }
 
-
-/* =========================================================
-   SANIDADE
-========================================================= */
-
 .status-card.sanidade {
-
     border-color:
         rgba(82,132,175,.20);
-
 }
 
 .status-card.sanidade::before {
-
     background:
         linear-gradient(
             90deg,
@@ -865,11 +673,9 @@ textarea {
             rgba(88,153,216,.6),
             transparent
         );
-
 }
 
 .status-card.sanidade::after {
-
     background:
         linear-gradient(
             180deg,
@@ -877,12 +683,10 @@ textarea {
             #5899d8,
             transparent
         );
-
 }
 
 .status-card.sanidade
 .barra-preenchimento {
-
     background:
         linear-gradient(
             90deg,
@@ -892,16 +696,9 @@ textarea {
 
     box-shadow:
         0 0 10px rgba(88,153,216,.25);
-
 }
 
-
-/* =========================================================
-   CAMPOS DO HUD
-========================================================= */
-
 .status-controles {
-
     display: grid;
 
     grid-template-columns:
@@ -910,12 +707,9 @@ textarea {
     gap: 8px;
 
     margin-top: 16px;
-
 }
 
-
 .status-controles input {
-
     min-width: 0;
 
     padding: 8px 9px;
@@ -930,53 +724,9 @@ textarea {
 
     border-radius: 5px;
 
-    font-family: "Inter", sans-serif;
-
     font-size: 11px;
 
     text-align: center;
-
-    transition:
-        border-color .2s ease,
-        background .2s ease,
-        color .2s ease;
-
-}
-
-
-.status-controles input:hover {
-
-    background:
-        rgba(255,255,255,.04);
-
-    border-color:
-        rgba(214,166,42,.20);
-
-}
-
-
-.status-controles input:focus {
-
-    color: white;
-
-    background:
-        rgba(214,166,42,.035);
-
-    border-color:
-        rgba(214,166,42,.5);
-
-    box-shadow:
-        0 0 0 2px
-        rgba(214,166,42,.055);
-
-}
-
-
-.status-controles input::-webkit-inner-spin-button,
-.status-controles input::-webkit-outer-spin-button {
-
-    opacity: .25;
-
 }
 
 
@@ -985,18 +735,15 @@ textarea {
 ========================================================= */
 
 .pericias {
-
     display: grid;
 
     grid-template-columns:
         repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 9px;
-
 }
 
 .pericia {
-
     display: grid;
 
     grid-template-columns:
@@ -1013,39 +760,31 @@ textarea {
     border: 1px solid #252525;
 
     border-radius: 6px;
-
 }
 
 .pericia-nome {
-
     font-size: 13px;
-
 }
 
 .pericia input {
-
     padding: 8px;
-
     text-align: center;
-
 }
 
 .bonus {
-
     padding: 4px 6px;
 
     border-radius: 4px;
 
     color: var(--ouro-claro);
 
-    background: rgba(214,166,42,.09);
+    background:
+        rgba(214,166,42,.09);
 
     font-size: 11px;
-
     font-weight: 700;
 
     white-space: nowrap;
-
 }
 
 
@@ -1054,7 +793,6 @@ textarea {
 ========================================================= */
 
 .item {
-
     display: grid;
 
     grid-template-columns:
@@ -1063,7 +801,6 @@ textarea {
     gap: 8px;
 
     margin-bottom: 8px;
-
 }
 
 
@@ -1072,83 +809,119 @@ textarea {
 ========================================================= */
 
 .registro {
-
     margin-bottom: 10px;
 
     padding: 14px;
 
-    border-left: 3px solid var(--ouro);
+    border-left:
+        3px solid var(--ouro);
 
     border-radius: 5px;
 
     background: #111;
-
 }
 
 .registro-data {
-
     color: var(--ouro);
 
     font-size: 11px;
 
     margin-bottom: 6px;
-
 }
 
 .registro-titulo {
-
     font-weight: 700;
-
     margin-bottom: 6px;
-
 }
 
 .registro-descricao {
-
     color: #aaa;
 
     white-space: pre-wrap;
 
     line-height: 1.5;
+}
 
+
+/* =========================================================
+   HISTÓRICO DE ALTERAÇÕES
+========================================================= */
+
+.historico-container {
+    max-height: 320px;
+
+    overflow-y: auto;
+
+    padding: 12px;
+
+    background:
+        rgba(5,5,5,.55);
+
+    border:
+        1px solid rgba(214,166,42,.16);
+
+    border-radius: 10px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--ouro-escuro)
+        transparent;
+}
+
+.historico-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.historico-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.historico-container::-webkit-scrollbar-thumb {
+    background:
+        var(--ouro-escuro);
+
+    border-radius: 10px;
+}
+
+.historico-container::-webkit-scrollbar-thumb:hover {
+    background:
+        var(--ouro);
 }
 
 .alteracao {
-
     padding: 11px 13px;
 
     margin-bottom: 7px;
 
     background: #111;
 
-    border: 1px solid #242424;
+    border:
+        1px solid #242424;
 
     border-radius: 6px;
 
     font-size: 13px;
+}
 
+.alteracao:last-child {
+    margin-bottom: 0;
 }
 
 .alteracao-data {
-
     margin-bottom: 4px;
 
     color: #666;
 
     font-size: 10px;
-
 }
 
 .valor-antigo {
-
     color: var(--vermelho);
-
 }
 
 .valor-novo {
-
     color: var(--verde);
-
 }
 
 
@@ -1159,87 +932,66 @@ textarea {
 @media(max-width: 900px) {
 
     .status-hud {
-
         grid-template-columns:
             1fr 1fr;
-
     }
 
 }
 
-
 @media(max-width: 750px) {
 
     .topo {
-
         position: relative;
 
         flex-direction: column;
 
         align-items: stretch;
-
     }
 
     .topo-botoes {
-
         justify-content: center;
-
     }
 
     .imagem-area {
-
         grid-template-columns: 1fr;
-
     }
 
     .preview {
-
         margin: auto;
-
     }
 
 }
-
 
 @media(max-width: 600px) {
 
     .status-hud {
-
         grid-template-columns:
             1fr;
-
     }
 
 }
 
-
 @media(max-width: 500px) {
 
     .secao {
-
         padding: 17px;
-
     }
 
     .pericia {
-
         grid-template-columns:
             1fr 65px;
-
     }
 
     .bonus {
-
-        grid-column: 1 / -1;
+        grid-column:
+            1 / -1;
 
         text-align: center;
-
     }
 
 }
 
 </style>
-
 </head>
 
 
@@ -1319,7 +1071,6 @@ textarea {
         Nenhuma imagem
     </div>
 
-
     <div>
 
         <div class="campo">
@@ -1338,7 +1089,6 @@ textarea {
 
         <br>
 
-
         <div class="grid">
 
             <div class="campo">
@@ -1353,7 +1103,6 @@ textarea {
 
             </div>
 
-
             <div class="campo">
 
                 <label>Idade</label>
@@ -1366,7 +1115,6 @@ textarea {
 
             </div>
 
-
             <div class="campo">
 
                 <label>Gênero</label>
@@ -1377,7 +1125,6 @@ textarea {
                 >
 
             </div>
-
 
             <div class="campo">
 
@@ -1436,7 +1183,6 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Pontos</label>
@@ -1449,7 +1195,6 @@ textarea {
         >
 
     </div>
-
 
     <div class="campo">
 
@@ -1480,12 +1225,24 @@ textarea {
 <div class="pontos-info">
 
     <span>
-        Pontos iniciais:
-        <strong>18</strong>
+        Pontos disponíveis:
+        <strong id="pontosAtributoTotal">
+            18
+        </strong>
     </span>
 
-    <span id="pontosRestantes" class="pontos-restantes">
-        Pontos restantes: 18
+    <span>
+        Utilizados:
+        <strong id="pontosAtributoUsados">
+            0
+        </strong>
+    </span>
+
+    <span
+        id="pontosAtributoRestantes"
+        class="pontos-restantes"
+    >
+        18
     </span>
 
 </div>
@@ -1494,7 +1251,7 @@ textarea {
     id="alertaAtributos"
     class="alerta"
 >
-    Você ultrapassou os 18 pontos disponíveis para os atributos.
+    Você ultrapassou a quantidade de pontos disponíveis para este Level.
 </div>
 
 
@@ -1506,7 +1263,7 @@ textarea {
 
         <input
             id="forca"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Força"
             type="number"
             min="0"
@@ -1515,22 +1272,20 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Destreza</label>
 
         <input
             id="destreza"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Destreza"
-            type="number"
+            type="        number"
             min="0"
             value="0"
         >
 
     </div>
-
 
     <div class="campo">
 
@@ -1538,7 +1293,7 @@ textarea {
 
         <input
             id="inteligencia"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Inteligência"
             type="number"
             min="0"
@@ -1547,14 +1302,13 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Vigor</label>
 
         <input
             id="vigor"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Vigor"
             type="number"
             min="0"
@@ -1563,14 +1317,13 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Vontade</label>
 
         <input
             id="vontade"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Vontade"
             type="number"
             min="0"
@@ -1579,14 +1332,13 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Autocontrole</label>
 
         <input
             id="autocontrole"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Autocontrole"
             type="number"
             min="0"
@@ -1595,14 +1347,13 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
         <label>Carisma</label>
 
         <input
             id="carisma"
-            class="atributo"
+            class="atributo atributo-input"
             data-atributo="Carisma"
             type="number"
             min="0"
@@ -1624,7 +1375,6 @@ textarea {
 
 <h2>Estado</h2>
 
-
 <div class="status-hud">
 
 
@@ -1638,21 +1388,20 @@ textarea {
                 Pontos de Vida
             </div>
 
-        </div>
+            <div
+                class="status-valor"
+                id="hudPV"
+            >
+                0 / 0
+            </div>
 
-        <div
-            class="status-valor"
-            id="pvTexto"
-        >
-            40 / 40
         </div>
 
         <div class="barra">
 
             <div
                 class="barra-preenchimento"
-                id="pvBarra"
-                style="width:100%"
+                id="barraPV"
             ></div>
 
         </div>
@@ -1660,18 +1409,18 @@ textarea {
         <div class="status-controles">
 
             <input
-                id="vida"
+                id="pvAtual"
                 type="number"
                 min="0"
-                value="40"
+                value="0"
                 placeholder="Atual"
             >
 
             <input
-                id="vidaMax"
+                id="pvMax"
                 type="number"
-                min="1"
-                value="40"
+                readonly
+                value="0"
                 placeholder="Máximo"
             >
 
@@ -1690,21 +1439,20 @@ textarea {
                 Limite
             </div>
 
-        </div>
+            <div
+                class="status-valor"
+                id="hudLimite"
+            >
+                0 / 100
+            </div>
 
-        <div
-            class="status-valor"
-            id="limiteTexto"
-        >
-            0 / 100
         </div>
 
         <div class="barra">
 
             <div
                 class="barra-preenchimento"
-                id="limiteBarra"
-                style="width:0%"
+                id="barraLimite"
             ></div>
 
         </div>
@@ -1712,7 +1460,7 @@ textarea {
         <div class="status-controles">
 
             <input
-                id="limite"
+                id="limiteAtual"
                 type="number"
                 min="0"
                 max="100"
@@ -1721,9 +1469,10 @@ textarea {
             >
 
             <input
-                type="text"
-                value="Máx. 100"
+                type="number"
                 readonly
+                value="100"
+                placeholder="Máximo"
             >
 
         </div>
@@ -1741,21 +1490,20 @@ textarea {
                 Sanidade
             </div>
 
-        </div>
+            <div
+                class="status-valor"
+                id="hudSanidade"
+            >
+                0 / 100
+            </div>
 
-        <div
-            class="status-valor"
-            id="sanidadeTexto"
-        >
-            100 / 100
         </div>
 
         <div class="barra">
 
             <div
                 class="barra-preenchimento"
-                id="sanidadeBarra"
-                style="width:100%"
+                id="barraSanidade"
             ></div>
 
         </div>
@@ -1763,18 +1511,19 @@ textarea {
         <div class="status-controles">
 
             <input
-                id="sanidade"
+                id="sanidadeAtual"
                 type="number"
                 min="0"
-                max="100"
-                value="100"
+                value="0"
                 placeholder="Atual"
             >
 
             <input
-                type="text"
-                value="Máx. 100"
+                id="sanidadeMax"
+                type="number"
                 readonly
+                value="100"
+                placeholder="Máximo"
             >
 
         </div>
@@ -1788,33 +1537,45 @@ textarea {
     Ferimentos
 </div>
 
-<div class="campo">
+<textarea
+    id="ferimentos"
+    placeholder="Descreva os ferimentos atuais..."
+></textarea>
 
-    <textarea
-        id="ferimentos"
-        placeholder="Descreva ferimentos, lesões ou efeitos físicos..."
-    ></textarea>
 
+<div class="subtitulo">
+    Sangramento
 </div>
 
+<div class="campo">
 
-<div class="grid">
+    <select id="sangramento">
 
-    <div class="campo">
+        <option value="0">
+            Nenhum
+        </option>
 
-        <label>Sangramento</label>
+        <option value="1">
+            Nível 1
+        </option>
 
-        <select id="sangramento">
+        <option value="2">
+            Nível 2
+        </option>
 
-            <option value="1">1 — Leve</option>
-            <option value="2">2 — Moderado</option>
-            <option value="3">3 — Grave</option>
-            <option value="4">4 — Crítico</option>
-            <option value="5">5 — Extremo</option>
+        <option value="3">
+            Nível 3
+        </option>
 
-        </select>
+        <option value="4">
+            Nível 4
+        </option>
 
-    </div>
+        <option value="5">
+            Nível 5
+        </option>
+
+    </select>
 
 </div>
 
@@ -1829,7 +1590,10 @@ textarea {
 
 <h2>Perícias</h2>
 
-<div class="pericias" id="pericias"></div>
+<div
+    class="pericias"
+    id="listaPericias"
+></div>
 
 </section>
 
@@ -1842,12 +1606,13 @@ textarea {
 
 <h2>Inventário</h2>
 
-
 <div class="grid">
 
     <div class="campo">
 
-        <label>Peso atual</label>
+        <label>
+            Peso atual
+        </label>
 
         <input
             id="pesoAtual"
@@ -1859,10 +1624,11 @@ textarea {
 
     </div>
 
-
     <div class="campo">
 
-        <label>Peso máximo</label>
+        <label>
+            Peso máximo
+        </label>
 
         <input
             id="pesoMaximo"
@@ -1881,13 +1647,10 @@ textarea {
     Itens
 </div>
 
-
 <div id="inventario"></div>
-
 
 <button
     type="button"
-    class="secundario"
     onclick="adicionarItem()"
 >
     + Adicionar item
@@ -1904,14 +1667,10 @@ textarea {
 
 <h2>Anotações</h2>
 
-<div class="campo">
-
-    <textarea
-        id="anotacoes"
-        placeholder="Anotações gerais sobre o personagem..."
-    ></textarea>
-
-</div>
+<textarea
+    id="anotacoes"
+    placeholder="Anotações gerais do personagem..."
+></textarea>
 
 </section>
 
@@ -1922,42 +1681,40 @@ textarea {
 
 <section class="secao">
 
-<h2>Registros</h2>
-
-
-<div class="subtitulo">
-    Registro de personagem
-</div>
-
+<h2>Registro de personagem</h2>
 
 <div class="grid">
 
     <div class="campo">
 
-        <label>Título</label>
+        <label>
+            Título
+        </label>
 
         <input
             id="registroTitulo"
             type="text"
-            placeholder="Título do registro"
+            placeholder="Ex.: Primeiro contato com a VIPERA"
         >
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>Descrição</label>
-
-        <textarea
-            id="registroDescricao"
-            placeholder="Descreva o acontecimento..."
-        ></textarea>
 
     </div>
 
 </div>
 
+<br>
+
+<div class="campo">
+
+    <label>
+        Descrição
+    </label>
+
+    <textarea
+        id="registroDescricao"
+        placeholder="Escreva o acontecimento..."
+    ></textarea>
+
+</div>
 
 <br>
 
@@ -1965,7 +1722,7 @@ textarea {
     type="button"
     onclick="adicionarRegistro()"
 >
-    Adicionar registro
+    + Adicionar registro
 </button>
 
 
@@ -1974,13 +1731,22 @@ textarea {
     style="margin-top:20px;"
 ></div>
 
+</section>
 
-<div class="subtitulo">
-    Histórico de alterações
+
+<!-- =========================================================
+     HISTÓRICO
+========================================================= -->
+
+<section class="secao">
+
+<h2>Histórico de alterações</h2>
+
+<div
+    id="historicoAlteracoes"
+    class="historico-container"
+>
 </div>
-
-
-<div id="historicoAlteracoes"></div>
 
 </section>
 
@@ -1991,30 +1757,135 @@ textarea {
 <script>
 
 /* =========================================================
-   LEVEL
+   CONFIGURAÇÕES
 ========================================================= */
 
-const levelSelect =
-    document.getElementById("level");
 
-for(let i = 1; i <= 50; i++){
+/*
+    A quantidade de pontos começa em 18
+    e aumenta 4 a cada Level.
+*/
 
-    const option =
-        document.createElement("option");
+const pontosPorLevel = {};
 
-    option.value = i;
-    option.textContent = i;
+for (let level = 1; level <= 36; level++) {
 
-    levelSelect.appendChild(option);
+    pontosPorLevel[level] =
+        18 + ((level - 1) * 4);
 
 }
+
+
+/*
+    Nomes dos Levels em algarismos romanos.
+*/
+
+const romanos = [
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX",
+    "X",
+    "XI",
+    "XII",
+    "XIII",
+    "XIV",
+    "XV",
+    "XVI",
+    "XVII",
+    "XVIII",
+    "XIX",
+    "XX",
+    "XXI",
+    "XXII",
+    "XXIII",
+    "XXIV",
+    "XXV",
+    "XXVI",
+    "XXVII",
+    "XXVIII",
+    "XXIX",
+    "XXX",
+    "XXXI",
+    "XXXII",
+    "XXXIII",
+    "XXXIV",
+    "XXXV",
+    "XXXVI"
+];
+
+
+/* =========================================================
+   CARGOS
+========================================================= */
+
+const cargos = {
+
+    "Lutador": {
+
+        vida: 40,
+
+        bonus: {
+
+            "Artes Marciais": 2,
+            "Luta": 2
+
+        }
+
+    },
+
+    "Investigador": {
+
+        vida: 25,
+
+        bonus: {
+
+            "Investigação": 2,
+            "Percepção": 2
+
+        }
+
+    },
+
+    "Atirador": {
+
+        vida: 30,
+
+        bonus: {
+
+            "Pontaria": 2,
+            "Armas de Fogo": 2
+
+        }
+
+    },
+
+    "Técnico": {
+
+        vida: 20,
+
+        bonus: {
+
+            "Tecnologia": 2,
+            "Ciências": 2
+
+        }
+
+    }
+
+};
 
 
 /* =========================================================
    PERÍCIAS
 ========================================================= */
 
-const listaPericias = [
+const nomesPericias = [
 
     "Reflexos",
     "Atletismo",
@@ -2043,185 +1914,45 @@ const listaPericias = [
 ];
 
 
-const periciasContainer =
-    document.getElementById("pericias");
+/* =========================================================
+   ESTADO
+========================================================= */
 
+let inventarioItens = [];
 
-listaPericias.forEach((nome, index) => {
+let registros = [];
 
-    const div =
-        document.createElement("div");
+let historico = [];
 
-    div.className = "pericia";
-
-    div.dataset.pericia = nome;
-
-    div.innerHTML = `
-
-        <div class="pericia-nome">
-            ${nome}
-        </div>
-
-        <input
-            type="number"
-            min="0"
-            value="0"
-            class="valor-pericia"
-            data-pericia="${nome}"
-        >
-
-        <div
-            class="bonus"
-            id="bonus-${index}"
-        >
-            +0
-        </div>
-
-    `;
-
-    periciasContainer.appendChild(div);
-
-});
+let imagemPersonagem = "";
 
 
 /* =========================================================
-   CARGOS
+   INICIALIZAR LEVELS
 ========================================================= */
 
-const cargos = {
+function criarLevels() {
 
-    "Lutador": {
+    const select =
+        document.getElementById("level");
 
-        vida: 40,
+    select.innerHTML = "";
 
-        bonus: {
-            "Artes Marciais": 2,
-            "Luta": 2
-        }
+    for (
+        let i = 1;
+        i <= 36;
+        i++
+    ) {
 
-    },
+        const option =
+            document.createElement("option");
 
-    "Investigador": {
+        option.value = i;
 
-        vida: 25,
+        option.textContent =
+            `Level ${romanos[i - 1]} — ${pontosPorLevel[i]} pontos`;
 
-        bonus: {
-            "Investigação": 2,
-            "Percepção": 2
-        }
-
-    },
-
-    "Atirador": {
-
-        vida: 30,
-
-        bonus: {
-            "Pontaria": 2,
-            "Armas de Fogo": 2
-        }
-
-    },
-
-    "Técnico": {
-
-        vida: 20,
-
-        bonus: {
-            "Tecnologia": 2,
-            "Ciências": 2
-        }
-
-    }
-
-};
-
-
-/* =========================================================
-   ATRIBUTOS
-========================================================= */
-
-const atributos =
-    document.querySelectorAll(".atributo");
-
-
-atributos.forEach(input => {
-
-    input.addEventListener(
-        "input",
-        () => {
-
-            atualizarPontos();
-
-            atualizarVida();
-
-            registrarAlteracao(
-                input.dataset.atributo,
-                input.dataset.atributo,
-                input.value
-            );
-
-        }
-    );
-
-});
-
-
-function atualizarPontos(){
-
-    let total = 0;
-
-    atributos.forEach(input => {
-
-        let valor =
-            parseInt(input.value) || 0;
-
-        if(valor < 0){
-
-            valor = 0;
-            input.value = 0;
-
-        }
-
-        total += valor;
-
-    });
-
-
-    const restante = 18 - total;
-
-    const elemento =
-        document.getElementById(
-            "pontosRestantes"
-        );
-
-    const alerta =
-        document.getElementById(
-            "alertaAtributos"
-        );
-
-
-    if(restante < 0){
-
-        elemento.textContent =
-            `Pontos excedidos: ${Math.abs(restante)}`;
-
-        elemento.className =
-            "pontos-excedidos";
-
-        alerta.style.display =
-            "block";
-
-    } else {
-
-        elemento.textContent =
-            `Pontos restantes: ${restante}`;
-
-        elemento.className =
-            "pontos-restantes";
-
-        alerta.style.display =
-            "none";
+        select.appendChild(option);
 
     }
 
@@ -2229,17 +1960,237 @@ function atualizarPontos(){
 
 
 /* =========================================================
-   VIDA
+   PONTOS DE ATRIBUTO
 ========================================================= */
 
-function calcularVidaMaxima(){
+function obterPontosDisponiveis() {
+
+    const level =
+        Number(
+            document.getElementById("level").value
+        ) || 1;
+
+    return pontosPorLevel[level] || 18;
+
+}
+
+
+function obterAtributos() {
+
+    return [
+        "forca",
+        "destreza",
+        "inteligencia",
+        "vigor",
+        "vontade",
+        "autocontrole",
+        "carisma"
+    ];
+
+}
+
+
+function calcularPontosUsados() {
+
+    let total = 0;
+
+    obterAtributos().forEach(id => {
+
+        const input =
+            document.getElementById(id);
+
+        total +=
+            Number(input.value) || 0;
+
+    });
+
+    return total;
+
+}
+
+
+function atualizarPontos() {
+
+    const total =
+        obterPontosDisponiveis();
+
+    const usados =
+        calcularPontosUsados();
+
+    const restantes =
+        total - usados;
+
+
+    document.getElementById(
+        "pontosAtributoTotal"
+    ).textContent = total;
+
+
+    document.getElementById(
+        "pontosAtributoUsados"
+    ).textContent = usados;
+
+
+    const restantesElemento =
+        document.getElementById(
+            "pontosAtributoRestantes"
+        );
+
+
+    if (restantes >= 0) {
+
+        restantesElemento.textContent =
+            `${restantes} restantes`;
+
+        restantesElemento.className =
+            "pontos-restantes";
+
+    } else {
+
+        restantesElemento.textContent =
+            `${Math.abs(restantes)} excedidos`;
+
+        restantesElemento.className =
+            "pontos-excedidos";
+
+    }
+
+
+    const alerta =
+        document.getElementById(
+            "alertaAtributos"
+        );
+
+
+    alerta.style.display =
+        restantes < 0
+            ? "block"
+            : "none";
+
+}
+
+
+/* =========================================================
+   SANIDADE
+========================================================= */
+
+/*
+    IMPORTANTE:
+
+    Você disse que Inteligência aumenta
+    o limite de Sanidade e que o limite máximo
+    é 300.
+
+    Como a fórmula exata ainda não foi definida,
+    estou usando:
+
+        100 + Inteligência × 10
+
+    limitado a 300.
+
+    Exemplo:
+
+    Inteligência 0  → 100
+    Inteligência 5  → 150
+    Inteligência 10 → 200
+    Inteligência 20 → 300
+
+    Se a fórmula oficial do VIPERA for diferente,
+    basta alterar esta função.
+*/
+
+function calcularSanidadeMaxima() {
+
+    const inteligencia =
+        Number(
+            document.getElementById(
+                "inteligencia"
+            ).value
+        ) || 0;
+
+    return Math.min(
+        300,
+        100 + (inteligencia * 10)
+    );
+
+}
+
+
+function atualizarSanidade() {
+
+    const max =
+        calcularSanidadeMaxima();
+
+    const inputAtual =
+        document.getElementById(
+            "sanidadeAtual"
+        );
+
+    const inputMax =
+        document.getElementById(
+            "sanidadeMax"
+        );
+
+
+    let atual =
+        Number(inputAtual.value) || 0;
+
+
+    /*
+        Se a Sanidade atual estiver acima
+        do novo limite, ela é ajustada.
+    */
+
+    if (atual > max) {
+
+        atual = max;
+
+        inputAtual.value =
+            atual;
+
+    }
+
+
+    inputMax.value =
+        max;
+
+
+    document.getElementById(
+        "hudSanidade"
+    ).textContent =
+        `${atual} / ${max}`;
+
+
+    const porcentagem =
+        max > 0
+            ? (atual / max) * 100
+            : 0;
+
+
+    document.getElementById(
+        "barraSanidade"
+    ).style.width =
+        `${Math.max(0, Math.min(100, porcentagem))}%`;
+
+}
+
+
+/* =========================================================
+   PV
+========================================================= */
+
+function calcularPVMaximo() {
 
     const cargo =
-        document.getElementById("cargo").value;
+        document.getElementById(
+            "cargo"
+        ).value;
 
     const vigor =
-        parseInt(
-            document.getElementById("vigor").value
+        Number(
+            document.getElementById(
+                "vigor"
+            ).value
         ) || 0;
 
 
@@ -2256,126 +2207,137 @@ function calcularVidaMaxima(){
 }
 
 
-function atualizarVida(){
+function atualizarVida() {
 
-    const vidaMax =
-        calcularVidaMaxima();
+    const novoMax =
+        calcularPVMaximo();
 
-    const vidaMaxInput =
-        document.getElementById("vidaMax");
+    const pvAtualInput =
+        document.getElementById(
+            "pvAtual"
+        );
 
-    const vidaInput =
-        document.getElementById("vida");
-
-
-    const vidaAnterior =
-        parseInt(vidaInput.value) || 0;
-
-
-    vidaMaxInput.value =
-        vidaMax;
+    const pvMaxInput =
+        document.getElementById(
+            "pvMax"
+        );
 
 
-    if(
-        vidaAnterior === 0 ||
-        vidaAnterior > vidaMax
-    ){
+    let atual =
+        Number(
+            pvAtualInput.value
+        ) || 0;
 
-        vidaInput.value =
-            vidaMax;
+
+    /*
+        Se ainda não existe PV,
+        o personagem começa com o máximo.
+    */
+
+    if (atual === 0 && novoMax > 0) {
+
+        atual = novoMax;
 
     }
 
 
-    atualizarHUD();
+    /*
+        Nunca permite que o PV atual
+        fique acima do máximo.
+    */
+
+    if (atual > novoMax) {
+
+        atual = novoMax;
+
+    }
+
+
+    pvAtualInput.value =
+        atual;
+
+    pvMaxInput.value =
+        novoMax;
+
+
+    atualizarHUDPV();
+
+}
+
+
+function atualizarHUDPV() {
+
+    const atual =
+        Number(
+            document.getElementById(
+                "pvAtual"
+            ).value
+        ) || 0;
+
+    const max =
+        Number(
+            document.getElementById(
+                "pvMax"
+            ).value
+        ) || 0;
+
+
+    document.getElementById(
+        "hudPV"
+    ).textContent =
+        `${atual} / ${max}`;
+
+
+    const porcentagem =
+        max > 0
+            ? (atual / max) * 100
+            : 0;
+
+
+    document.getElementById(
+        "barraPV"
+    ).style.width =
+        `${Math.max(0, Math.min(100, porcentagem))}%`;
 
 }
 
 
 /* =========================================================
-   CARGO
+   LIMITE
 ========================================================= */
 
-document
-    .getElementById("cargo")
-    .addEventListener(
-        "change",
-        function(){
+function atualizarLimite() {
 
-            atualizarCargo();
+    const input =
+        document.getElementById(
+            "limiteAtual"
+        );
 
-        }
-    );
-
-
-function atualizarCargo(){
-
-    const cargo =
-        document.getElementById("cargo").value;
+    let valor =
+        Number(input.value) || 0;
 
 
-    const config =
-        cargos[cargo];
+    valor =
+        Math.max(
+            0,
+            Math.min(100, valor)
+        );
 
 
-    document
-        .querySelectorAll(".bonus")
-        .forEach(elemento => {
-
-            elemento.textContent =
-                "+0";
-
-        });
+    input.value =
+        valor;
 
 
-    if(config){
-
-        Object.entries(config.bonus)
-            .forEach(
-                ([pericia, valor]) => {
-
-                    const elemento =
-                        document.querySelector(
-                            `.bonus[data-pericia="${pericia}"]`
-                        );
+    document.getElementById(
+        "hudLimite"
+    ).textContent =
+        `${valor} / 100`;
 
 
-                    /*
-                     * Caso o bônus não encontre
-                     * o elemento, procuramos
-                     * diretamente pelo nome.
-                     */
-
-                    const periciaInput =
-                        document.querySelector(
-                            `.valor-pericia[data-pericia="${pericia}"]`
-                        );
-
-
-                    if(periciaInput){
-
-                        const pai =
-                            periciaInput.closest(
-                                ".pericia"
-                            );
-
-                        const bonus =
-                            pai.querySelector(
-                                ".bonus"
-                            );
-
-                        bonus.textContent =
-                            `+${valor}`;
-
-                    }
-
-                }
-            );
-
-    }
-
-
-    atualizarVida();
+    document.getElementById(
+        "barraLimite"
+    ).style.width =
+        `${valor}%`;
 
 }
 
@@ -2384,147 +2346,264 @@ function atualizarCargo(){
    HUD
 ========================================================= */
 
-function atualizarHUD(){
+function atualizarHUD() {
 
-    const vida =
-        Number(
-            document.getElementById("vida").value
-        ) || 0;
+    atualizarHUDPV();
 
-    const vidaMax =
-        Number(
-            document.getElementById("vidaMax").value
-        ) || 1;
+    atualizarLimite();
 
-
-    const limite =
-        Number(
-            document.getElementById("limite").value
-        ) || 0;
-
-
-    const sanidade =
-        Number(
-            document.getElementById("sanidade").value
-        ) || 0;
-
-
-    document.getElementById(
-        "pvTexto"
-    ).textContent =
-        `${vida} / ${vidaMax}`;
-
-
-    document.getElementById(
-        "limiteTexto"
-    ).textContent =
-        `${limite} / 100`;
-
-
-    document.getElementById(
-        "sanidadeTexto"
-    ).textContent =
-        `${sanidade} / 100`;
-
-
-    document.getElementById(
-        "pvBarra"
-    ).style.width =
-        Math.max(
-            0,
-            Math.min(
-                100,
-                (vida / vidaMax) * 100
-            )
-        ) + "%";
-
-
-    document.getElementById(
-        "limiteBarra"
-    ).style.width =
-        Math.max(
-            0,
-            Math.min(
-                100,
-                limite
-            )
-        ) + "%";
-
-
-    document.getElementById(
-        "sanidadeBarra"
-    ).style.width =
-        Math.max(
-            0,
-            Math.min(
-                100,
-                sanidade
-            )
-        ) + "%";
+    atualizarSanidade();
 
 }
 
 
 /* =========================================================
-   CAMPOS DO HUD
+   CARGO
 ========================================================= */
 
-[
-    "vida",
-    "vidaMax",
-    "limite",
-    "sanidade"
-].forEach(id => {
+function atualizarCargo() {
+
+    const cargo =
+        document.getElementById(
+            "cargo"
+        ).value;
+
 
     document
-        .getElementById(id)
-        .addEventListener(
-            "input",
-            atualizarHUD
+        .querySelectorAll(".bonus")
+        .forEach(elemento => {
+
+            elemento.remove();
+
+        });
+
+
+    const dadosCargo =
+        cargos[cargo];
+
+
+    if (!dadosCargo) {
+
+        atualizarVida();
+
+        atualizarPericias();
+
+        return;
+
+    }
+
+
+    Object.entries(
+        dadosCargo.bonus
+    ).forEach(
+        ([pericia, bonus]) => {
+
+            const elemento =
+                document.querySelector(
+                    `[data-pericia="${pericia}"]`
+                );
+
+
+            if (!elemento) return;
+
+
+            const bonusElemento =
+                document.createElement("span");
+
+            bonusElemento.className =
+                "bonus";
+
+            bonusElemento.textContent =
+                `+${bonus}`;
+
+
+            elemento.parentElement
+                .appendChild(
+                    bonusElemento
+                );
+
+        }
+    );
+
+
+    atualizarVida();
+
+}
+
+
+/* =========================================================
+   PERÍCIAS
+========================================================= */
+
+function criarPericias() {
+
+    const container =
+        document.getElementById(
+            "listaPericias"
         );
 
-});
+
+    container.innerHTML = "";
+
+
+    nomesPericias.forEach(
+        nome => {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+            div.className =
+                "pericia";
+
+
+            div.dataset.pericia =
+                nome;
+
+
+            const label =
+                document.createElement(
+                    "div"
+                );
+
+            label.className =
+                "pericia-nome";
+
+            label.textContent =
+                nome;
+
+
+            const input =
+                document.createElement(
+                    "input"
+                );
+
+            input.type =
+                "number";
+
+            input.min =
+                "0";
+
+            input.value =
+                "0";
+
+            input.className =
+                "valor-pericia";
+
+            input.dataset.pericia =
+                nome;
+
+
+            div.appendChild(label);
+
+            div.appendChild(input);
+
+            container.appendChild(div);
+
+        }
+    );
+
+
+    atualizarPericias();
+
+}
+
+
+function atualizarPericias() {
+
+    /*
+        Remove os bônus anteriores.
+    */
+
+    document
+        .querySelectorAll(".bonus")
+        .forEach(
+            elemento =>
+                elemento.remove()
+        );
+
+
+    const cargo =
+        document.getElementById(
+            "cargo"
+        ).value;
+
+
+    const dados =
+        cargos[cargo];
+
+
+    if (!dados) return;
+
+
+    Object.entries(
+        dados.bonus
+    ).forEach(
+        ([pericia, bonus]) => {
+
+            const container =
+                document.querySelector(
+                    `[data-pericia="${pericia}"]`
+        );
+
+
+        if (!elemento) return;
+
+
+        const bonusElemento =
+            document.createElement("span");
+
+        bonusElemento.className =
+            "bonus";
+
+        bonusElemento.textContent =
+            `+${bonus}`;
+
+
+        elemento.parentElement.appendChild(
+            bonusElemento
+        );
+
+    });
+
+}
 
 
 /* =========================================================
    INVENTÁRIO
 ========================================================= */
 
-let itens = [];
-
-
 function adicionarItem(
     nome = "",
     peso = ""
-){
+) {
 
-    itens.push({
+    inventarioItens.push({
 
-        nome,
-        peso
+        nome: nome,
+        peso: peso
 
     });
-
 
     renderizarInventario();
 
 }
 
 
-function removerItem(index){
+function removerItem(index) {
 
-    itens.splice(
+    inventarioItens.splice(
         index,
         1
     );
 
-
     renderizarInventario();
 
 }
 
 
-function renderizarInventario(){
+function renderizarInventario() {
 
     const container =
         document.getElementById(
@@ -2535,7 +2614,7 @@ function renderizarInventario(){
     container.innerHTML = "";
 
 
-    itens.forEach(
+    inventarioItens.forEach(
         (item, index) => {
 
             const div =
@@ -2543,38 +2622,97 @@ function renderizarInventario(){
                     "div"
                 );
 
-
-            div.className =
-                "item";
+            div.className = "item";
 
 
-            div.innerHTML = `
+            const nomeInput =
+                document.createElement(
+                    "input"
+                );
 
-                <input
-                    type="text"
-                    placeholder="Nome do item"
-                    value="${escapeHTML(item.nome)}"
-                    oninput="itens[${index}].nome=this.value"
-                >
+            nomeInput.type = "text";
 
-                <input
-                    type="number"
-                    min="0"
-                    step="0.1"
-                    placeholder="Peso"
-                    value="${item.peso}"
-                    oninput="itens[${index}].peso=this.value"
-                >
+            nomeInput.placeholder =
+                "Nome do item";
 
-                <button
-                    type="button"
-                    class="perigo"
-                    onclick="removerItem(${index})"
-                >
-                    ×
-                </button>
+            nomeInput.value =
+                item.nome;
 
-            `;
+
+            nomeInput.addEventListener(
+                "input",
+                () => {
+
+                    inventarioItens[index].nome =
+                        nomeInput.value;
+
+                }
+            );
+
+
+            const pesoInput =
+                document.createElement(
+                    "input"
+                );
+
+            pesoInput.type = "number";
+
+            pesoInput.min = "0";
+
+            pesoInput.step = "0.1";
+
+            pesoInput.placeholder =
+                "Peso";
+
+            pesoInput.value =
+                item.peso;
+
+
+            pesoInput.addEventListener(
+                "input",
+                () => {
+
+                    inventarioItens[index].peso =
+                        pesoInput.value;
+
+                }
+            );
+
+
+            const remover =
+                document.createElement(
+                    "button"
+                );
+
+            remover.type = "button";
+
+            remover.className =
+                "perigo";
+
+            remover.textContent = "×";
+
+
+            remover.addEventListener(
+                "click",
+                () => {
+
+                    removerItem(index);
+
+                }
+            );
+
+
+            div.appendChild(
+                nomeInput
+            );
+
+            div.appendChild(
+                pesoInput
+            );
+
+            div.appendChild(
+                remover
+            );
 
 
             container.appendChild(div);
@@ -2585,26 +2723,11 @@ function renderizarInventario(){
 }
 
 
-function escapeHTML(text){
-
-    return String(text)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-
-}
-
-
 /* =========================================================
    REGISTROS
 ========================================================= */
 
-let registros = [];
-
-
-function adicionarRegistro(){
+function adicionarRegistro() {
 
     const titulo =
         document.getElementById(
@@ -2618,7 +2741,7 @@ function adicionarRegistro(){
         ).value.trim();
 
 
-    if(!titulo && !descricao){
+    if (!titulo && !descricao) {
 
         return;
 
@@ -2632,9 +2755,11 @@ function adicionarRegistro(){
                 "pt-BR"
             ),
 
-        titulo,
+        titulo:
+            titulo,
 
-        descricao
+        descricao:
+            descricao
 
     });
 
@@ -2654,7 +2779,7 @@ function adicionarRegistro(){
 }
 
 
-function renderizarRegistros(){
+function renderizarRegistros() {
 
     const container =
         document.getElementById(
@@ -2681,23 +2806,48 @@ function renderizarRegistros(){
                     "registro";
 
 
-                div.innerHTML = `
+                const data =
+                    document.createElement(
+                        "div"
+                    );
 
-                    <div class="registro-data">
-                        ${escapeHTML(registro.data)}
+                data.className =
+                    "registro-data";
 
-                        ${escapeHTML(registro.data)}
-                    </div>
+                data.textContent =
+                    registro.data;
 
-                    <div class="registro-titulo">
-                        ${escapeHTML(registro.titulo)}
-                    </div>
 
-                    <div class="registro-descricao">
-                        ${escapeHTML(registro.descricao)}
-                    </div>
+                const titulo =
+                    document.createElement(
+                        "div"
+                    );
 
-                `;
+                titulo.className =
+                    "registro-titulo";
+
+                titulo.textContent =
+                    registro.titulo;
+
+
+                const descricao =
+                    document.createElement(
+                        "div"
+                    );
+
+                descricao.className =
+                    "registro-descricao";
+
+                descricao.textContent =
+                    registro.descricao;
+
+
+                div.appendChild(data);
+
+                div.appendChild(titulo);
+
+                div.appendChild(descricao);
+
 
                 container.appendChild(div);
 
@@ -2711,18 +2861,21 @@ function renderizarRegistros(){
    HISTÓRICO DE ALTERAÇÕES
 ========================================================= */
 
-let historico = [];
-
-
 function registrarAlteracao(
     campo,
     antigo,
     novo
-){
+) {
 
-    if(String(antigo) === String(novo)){
+    if (
+        String(antigo) ===
+        String(novo)
+    ) {
+
         return;
+
     }
+
 
     historico.push({
 
@@ -2731,11 +2884,14 @@ function registrarAlteracao(
                 "pt-BR"
             ),
 
-        campo,
+        campo:
+            campo,
 
-        antigo,
+        antigo:
+            antigo,
 
-        novo
+        novo:
+            novo
 
     });
 
@@ -2745,7 +2901,7 @@ function registrarAlteracao(
 }
 
 
-function renderizarHistorico(){
+function renderizarHistorico() {
 
     const container =
         document.getElementById(
@@ -2754,6 +2910,13 @@ function renderizarHistorico(){
 
 
     container.innerHTML = "";
+
+
+    /*
+        O CSS já transforma esta área
+        em uma caixa com altura máxima
+        e rolagem vertical.
+    */
 
 
     historico
@@ -2772,38 +2935,95 @@ function renderizarHistorico(){
                     "alteracao";
 
 
-                div.innerHTML = `
+                const data =
+                    document.createElement(
+                        "div"
+                    );
 
-                    <div class="alteracao-data">
-                        ${escapeHTML(alteracao.data)}
-                    </div>
+                data.className =
+                    "alteracao-data";
+
+                data.textContent =
+                    alteracao.data;
+
+
+                const texto =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                texto.innerHTML = `
 
                     <strong>
-                        ${escapeHTML(alteracao.campo)}
+                        ${escapeHTML(
+                            alteracao.campo
+                        )}
                     </strong>
 
-                    <div style="margin-top:6px;">
+                    :
 
-                        <span class="valor-antigo">
-                            ${escapeHTML(String(alteracao.antigo))}
-                        </span>
+                    <span class="valor-antigo">
+                        ${escapeHTML(
+                            String(
+                                alteracao.antigo
+                            )
+                        )}
+                    </span>
 
-                        <span style="color:#555;">
-                            →
-                        </span>
+                    →
 
-                        <span class="valor-novo">
-                            ${escapeHTML(String(alteracao.novo))}
-                        </span>
-
-                    </div>
+                    <span class="valor-novo">
+                        ${escapeHTML(
+                            String(
+                                alteracao.novo
+                            )
+                        )}
+                    </span>
 
                 `;
+
+
+                div.appendChild(data);
+
+                div.appendChild(texto);
 
 
                 container.appendChild(div);
 
             }
+        );
+
+}
+
+
+function escapeHTML(text) {
+
+    return String(text)
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
         );
 
 }
@@ -2817,13 +3037,16 @@ document
     .getElementById("imagem")
     .addEventListener(
         "change",
-        function(event){
+        function(event) {
 
             const arquivo =
                 event.target.files[0];
 
-            if(!arquivo){
+
+            if (!arquivo) {
+
                 return;
+
             }
 
 
@@ -2832,7 +3055,11 @@ document
 
 
             leitor.onload =
-                function(e){
+                function(e) {
+
+                    imagemPersonagem =
+                        e.target.result;
+
 
                     const preview =
                         document.getElementById(
@@ -2840,14 +3067,20 @@ document
                         );
 
 
-                    preview.innerHTML = `
+                    preview.innerHTML = "";
 
-                        <img
-                            src="${e.target.result}"
-                            alt="Imagem do personagem"
-                        >
 
-                    `;
+                    const img =
+                        document.createElement(
+                            "img"
+                        );
+
+
+                    img.src =
+                        imagemPersonagem;
+
+
+                    preview.appendChild(img);
 
                 };
 
@@ -2859,12 +3092,314 @@ document
 
 
 /* =========================================================
-   SALVAR FICHA — JSON
+   EVENTOS DOS ATRIBUTOS
 ========================================================= */
 
-function salvarJSON(){
+document
+    .querySelectorAll(".atributo-input")
+    .forEach(
+        input => {
 
-    const dados = {
+            input.addEventListener(
+                "input",
+                function() {
+
+                    let valor =
+                        Number(
+                            input.value
+                        ) || 0;
+
+
+                    /*
+                        Não colocamos max="20"
+                        no HTML e também não
+                        bloqueamos valores acima
+                        de 20 aqui.
+
+                        Assim, pessoas que tenham
+                        capacidade de ultrapassar
+                        esse valor continuam podendo
+                        fazê-lo.
+                    */
+
+                    if (valor < 0) {
+
+                        valor = 0;
+
+                        input.value = 0;
+
+                    }
+
+
+                    atualizarPontos();
+
+
+                    /*
+                        Inteligência altera
+                        diretamente a Sanidade máxima.
+                    */
+
+                    if (
+                        input.id ===
+                        "inteligencia"
+                    ) {
+
+                        atualizarSanidade();
+
+                    }
+
+
+                    /*
+                        Vigor altera
+                        diretamente o PV máximo.
+                    */
+
+                    if (
+                        input.id ===
+                        "vigor"
+                    ) {
+
+                        atualizarVida();
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+document
+    .getElementById("level")
+    .addEventListener(
+        "change",
+        function() {
+
+            const novoTotal =
+                obterPontosDisponiveis();
+
+
+            atualizarPontos();
+
+
+            registrarAlteracao(
+                "Level",
+                "",
+                `Level ${
+                    romanos[
+                        Number(this.value) - 1
+                    ]
+                } — ${novoTotal} pontos`
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   CARGO
+========================================================= */
+
+document
+    .getElementById("cargo")
+    .addEventListener(
+        "change",
+        function() {
+
+            atualizarCargo();
+
+        }
+    );
+
+
+/* =========================================================
+   PV
+========================================================= */
+
+document
+    .getElementById("pvAtual")
+    .addEventListener(
+        "input",
+        function() {
+
+            let valor =
+                Number(this.value) || 0;
+
+
+            const max =
+                Number(
+                    document.getElementById(
+                        "pvMax"
+                    ).value
+                ) || 0;
+
+
+            valor =
+                Math.max(
+                    0,
+                    Math.min(
+                        max,
+                        valor
+                    )
+                );
+
+
+            this.value =
+                valor;
+
+
+            atualizarHUDPV();
+
+        }
+    );
+
+
+/* =========================================================
+   LIMITE
+========================================================= */
+
+document
+    .getElementById("limiteAtual")
+    .addEventListener(
+        "input",
+        atualizarLimite
+    );
+
+
+/* =========================================================
+   SANIDADE
+========================================================= */
+
+document
+    .getElementById("sanidadeAtual")
+    .addEventListener(
+        "input",
+        function() {
+
+            let valor =
+                Number(this.value) || 0;
+
+
+            const max =
+                Number(
+                    document.getElementById(
+                        "sanidadeMax"
+                    ).value
+                ) || 0;
+
+
+            valor =
+                Math.max(
+                    0,
+                    Math.min(
+                        max,
+                        valor
+                    )
+                );
+
+
+            this.value =
+                valor;
+
+
+            atualizarSanidade();
+
+        }
+    );
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+function inicializarFicha() {
+
+    criarLevels();
+
+    criarPericias();
+
+    /*
+        Level inicial.
+    */
+
+    document.getElementById(
+        "level"
+    ).value = "1";
+
+
+    /*
+        Atualiza todos os sistemas.
+    */
+
+    atualizarPontos();
+
+    atualizarVida();
+
+    atualizarSanidade();
+
+    atualizarLimite();
+
+    atualizarPericias();
+
+    renderizarInventario();
+
+    renderizarRegistros();
+
+    renderizarHistorico();
+
+}
+
+
+/* =========================================================
+   SALVAR JSON
+========================================================= */
+
+function coletarFicha() {
+
+    const atributos = {};
+
+
+    obterAtributos().forEach(
+        id => {
+
+            atributos[id] =
+                Number(
+                    document.getElementById(
+                        id
+                    ).value
+                ) || 0;
+
+        }
+    );
+
+
+    const pericias = {};
+
+
+    document
+        .querySelectorAll(
+            ".valor-pericia"
+        )
+        .forEach(
+            input => {
+
+                pericias[
+                    input.dataset.pericia
+                ] =
+                    Number(
+                        input.value
+                    ) || 0;
+
+            }
+        );
+
+
+    return {
 
         versao: "VIPERA-1.0",
 
@@ -2888,13 +3423,7 @@ function salvarJSON(){
             cargo:
                 document.getElementById(
                     "cargo"
-                ).value,
-
-            imagem:
-                document
-                    .getElementById("preview")
-                    .querySelector("img")
-                    ?.src || ""
+                ).value
 
         },
 
@@ -2902,47 +3431,68 @@ function salvarJSON(){
         progressao: {
 
             level:
-                document.getElementById(
-                    "level"
-                ).value,
+                Number(
+                    document.getElementById(
+                        "level"
+                    ).value
+                ),
 
             pontos:
-                document.getElementById(
-                    "pontos"
-                ).value,
+                Number(
+                    document.getElementById(
+                        "pontos"
+                    ).value
+                ) || 0,
 
             xp:
-                document.getElementById(
-                    "xp"
-                ).value
+                Number(
+                    document.getElementById(
+                        "xp"
+                    ).value
+                ) || 0
 
         },
 
 
-        atributos: {},
+        atributos: atributos,
 
 
         estado: {
 
-            vida:
-                document.getElementById(
-                    "vida"
-                ).value,
+            pvAtual:
+                Number(
+                    document.getElementById(
+                        "pvAtual"
+                    ).value
+                ) || 0,
 
-            vidaMax:
-                document.getElementById(
-                    "vidaMax"
-                ).value,
+            pvMax:
+                Number(
+                    document.getElementById(
+                        "pvMax"
+                    ).value
+                ) || 0,
 
             limite:
-                document.getElementById(
-                    "limite"
-                ).value,
+                Number(
+                    document.getElementById(
+                        "limiteAtual"
+                    ).value
+                ) || 0,
 
-            sanidade:
-                document.getElementById(
-                    "sanidade"
-                ).value,
+            sanidadeAtual:
+                Number(
+                    document.getElementById(
+                        "sanidadeAtual"
+                    ).value
+                ) || 0,
+
+            sanidadeMax:
+                Number(
+                    document.getElementById(
+                        "sanidadeMax"
+                    ).value
+                ) || 0,
 
             ferimentos:
                 document.getElementById(
@@ -2957,7 +3507,7 @@ function salvarJSON(){
         },
 
 
-        pericias: {},
+        pericias: pericias,
 
 
         inventario: {
@@ -2973,7 +3523,7 @@ function salvarJSON(){
                 ).value,
 
             itens:
-                itens
+                inventarioItens
 
         },
 
@@ -2989,38 +3539,26 @@ function salvarJSON(){
 
 
         historico:
-            historico
+            historico,
+
+
+        imagem:
+            imagemPersonagem
 
     };
 
-
-    atributos.forEach(
-        input => {
-
-            dados.atributos[
-                input.dataset.atributo
-            ] = input.value;
-
-        }
-    );
+}
 
 
-    document
-        .querySelectorAll(".valor-pericia")
-        .forEach(
-            input => {
+function salvarJSON() {
 
-                dados.pericias[
-                    input.dataset.pericia
-                ] = input.value;
-
-            }
-        );
+    const ficha =
+        coletarFicha();
 
 
     const json =
         JSON.stringify(
-            dados,
+            ficha,
             null,
             4
         );
@@ -3037,24 +3575,35 @@ function salvarJSON(){
 
 
     const url =
-        URL.createObjectURL(blob);
+        URL.createObjectURL(
+            blob
+        );
 
 
     const link =
-        document.createElement("a");
+        document.createElement(
+            "a"
+        );
 
 
-    link.href = url;
+    link.href =
+        url;
+
+
+    const nome =
+        document.getElementById(
+            "nome"
+        ).value.trim();
+
 
     link.download =
-        `${dados.identidade.nome || "ficha-vipera"}.json`;
+        nome
+            ? `VIPERA-${nome}.json`
+            : "VIPERA-ficha.json";
 
-
-    document.body.appendChild(link);
 
     link.click();
 
-    document.body.removeChild(link);
 
     URL.revokeObjectURL(url);
 
@@ -3062,10 +3611,10 @@ function salvarJSON(){
 
 
 /* =========================================================
-   CARREGAR FICHA — JSON
+   CARREGAR JSON
 ========================================================= */
 
-function abrirCarregador(){
+function abrirCarregador() {
 
     document
         .getElementById(
@@ -3076,14 +3625,16 @@ function abrirCarregador(){
 }
 
 
-function carregarJSON(event){
+function carregarJSON(event) {
 
     const arquivo =
         event.target.files[0];
 
 
-    if(!arquivo){
+    if (!arquivo) {
+
         return;
+
     }
 
 
@@ -3092,29 +3643,35 @@ function carregarJSON(event){
 
 
     leitor.onload =
-        function(e){
+        function(e) {
 
             try {
 
-                const dados =
+                const ficha =
                     JSON.parse(
                         e.target.result
                     );
 
 
                 preencherFicha(
-                    dados
+                    ficha
                 );
 
-
-            } catch(erro){
 
                 alert(
-                    "Não foi possível carregar esta ficha. O arquivo JSON pode estar inválido."
+                    "Ficha carregada com sucesso."
                 );
+
+
+            } catch (erro) {
 
                 console.error(
                     erro
+                );
+
+
+                alert(
+                    "Não foi possível carregar a ficha. Verifique se o arquivo é um JSON válido."
                 );
 
             }
@@ -3133,76 +3690,135 @@ function carregarJSON(event){
 
 
 /* =========================================================
-   PREENCHER FICHA
+   PREENCHER FICHA COM JSON
 ========================================================= */
 
-function preencherFicha(dados){
+function preencherFicha(ficha) {
 
-    /* IDENTIDADE */
+    if (!ficha || typeof ficha !== "object") {
 
-    if(dados.identidade){
+        alert(
+            "O arquivo não contém uma ficha VIPERA válida."
+        );
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       IDENTIDADE
+    ===================================================== */
+
+    if (ficha.identidade) {
 
         document.getElementById(
             "nome"
         ).value =
-            dados.identidade.nome || "";
+            ficha.identidade.nome || "";
 
 
         document.getElementById(
             "idade"
         ).value =
-            dados.identidade.idade || "";
+            ficha.identidade.idade || "";
 
 
         document.getElementById(
             "genero"
         ).value =
-            dados.identidade.genero || "";
+            ficha.identidade.genero || "";
 
 
         document.getElementById(
             "cargo"
         ).value =
-            dados.identidade.cargo || "";
+            ficha.identidade.cargo || "Lutador";
 
     }
 
 
-    /* PROGRESSÃO */
+    /* =====================================================
+       PROGRESSÃO
+    ===================================================== */
 
-    if(dados.progressao){
+    if (ficha.progressao) {
+
+        const level =
+            Number(
+                ficha.progressao.level
+            ) || 1;
+
 
         document.getElementById(
             "level"
         ).value =
-            dados.progressao.level || 1;
+            String(
+                Math.max(
+                    1,
+                    Math.min(
+                        36,
+                        level
+                    )
+                )
+            );
 
 
         document.getElementById(
             "pontos"
         ).value =
-            dados.progressao.pontos || 0;
+            Number(
+                ficha.progressao.pontos
+            ) || obterPontosDisponiveis();
 
 
         document.getElementById(
             "xp"
         ).value =
-            dados.progressao.xp || 0;
+            Number(
+                ficha.progressao.xp
+            ) || 0;
 
     }
 
 
-    /* ATRIBUTOS */
+    /* =====================================================
+       ATRIBUTOS
+    ===================================================== */
 
-    if(dados.atributos){
+    if (ficha.atributos) {
 
-        atributos.forEach(
-            input => {
+        obterAtributos().forEach(
+            id => {
 
-                input.value =
-                    dados.atributos[
-                        input.dataset.atributo
-                    ] ?? 0;
+                const input =
+                    document.getElementById(
+                        id
+                    );
+
+
+                if (
+                    Object.prototype.hasOwnProperty.call(
+                        ficha.atributos,
+                        id
+                    )
+                ) {
+
+                    const valor =
+                        Number(
+                            ficha.atributos[id]
+                        );
+
+
+                    input.value =
+                        Number.isFinite(valor)
+                            ? Math.max(
+                                0,
+                                valor
+                            )
+                            : 0;
+
+                }
 
             }
         );
@@ -3210,51 +3826,59 @@ function preencherFicha(dados){
     }
 
 
-    /* ESTADO */
+    /* =====================================================
+       ESTADO
+    ===================================================== */
 
-    if(dados.estado){
+    if (ficha.estado) {
 
-        document.getElementById(
-            "vida"
-        ).value =
-            dados.estado.vida ?? 0;
-
-
-        document.getElementById(
-            "vidaMax"
-        ).value =
-            dados.estado.vidaMax ?? 0;
+        const estado =
+            ficha.estado;
 
 
         document.getElementById(
-            "limite"
+            "pvAtual"
         ).value =
-            dados.estado.limite ?? 0;
+            Number(
+                estado.pvAtual
+            ) || 0;
 
 
         document.getElementById(
-            "sanidade"
+            "limiteAtual"
         ).value =
-            dados.estado.sanidade ?? 100;
+            Number(
+                estado.limite
+            ) || 0;
+
+
+        document.getElementById(
+            "sanidadeAtual"
+        ).value =
+            Number(
+                estado.sanidadeAtual
+            ) || 0;
 
 
         document.getElementById(
             "ferimentos"
         ).value =
-            dados.estado.ferimentos || "";
+            estado.ferimentos || "";
 
 
         document.getElementById(
             "sangramento"
         ).value =
-            dados.estado.sangramento || 1;
+            estado.sangramento || "0";
 
     }
 
 
-    /* PERÍCIAS */
+    /* =====================================================
+       PERÍCIAS
+    ===================================================== */
 
-    if(dados.pericias){
+    if (ficha.pericias) {
 
         document
             .querySelectorAll(
@@ -3263,10 +3887,32 @@ function preencherFicha(dados){
             .forEach(
                 input => {
 
-                    input.value =
-                        dados.pericias[
-                            input.dataset.pericia
-                        ] ?? 0;
+                    const nome =
+                        input.dataset.pericia;
+
+
+                    if (
+                        Object.prototype.hasOwnProperty.call(
+                            ficha.pericias,
+                            nome
+                        )
+                    ) {
+
+                        const valor =
+                            Number(
+                                ficha.pericias[nome]
+                            );
+
+
+                        input.value =
+                            Number.isFinite(valor)
+                                ? Math.max(
+                                    0,
+                                    valor
+                                )
+                                : 0;
+
+                    }
 
                 }
             );
@@ -3274,121 +3920,272 @@ function preencherFicha(dados){
     }
 
 
-    /* INVENTÁRIO */
+    /* =====================================================
+       INVENTÁRIO
+    ===================================================== */
 
-    if(dados.inventario){
+    if (ficha.inventario) {
 
         document.getElementById(
             "pesoAtual"
         ).value =
-            dados.inventario.pesoAtual ?? 0;
+            ficha.inventario.pesoAtual || "";
 
 
         document.getElementById(
             "pesoMaximo"
         ).value =
-            dados.inventario.pesoMaximo ?? 0;
+            ficha.inventario.pesoMaximo || "";
 
 
-        itens =
+        if (
             Array.isArray(
-                dados.inventario.itens
+                ficha.inventario.itens
             )
-            ? dados.inventario.itens
-            : [];
+        ) {
 
+            inventarioItens =
+                ficha.inventario.itens.map(
+                    item => ({
 
-        renderizarInventario();
+                        nome:
+                            item.nome || "",
+
+                        peso:
+                            item.peso ?? ""
+
+                    })
+                );
+
+        } else {
+
+            inventarioItens = [];
+
+        }
+
+    } else {
+
+        inventarioItens = [];
 
     }
 
 
-    /* ANOTAÇÕES */
+    /* =====================================================
+       ANOTAÇÕES
+    ===================================================== */
 
     document.getElementById(
         "anotacoes"
     ).value =
-        dados.anotacoes || "";
+        ficha.anotacoes || "";
 
 
-    /* REGISTROS */
+    /* =====================================================
+       REGISTROS
+    ===================================================== */
 
-    registros =
+    if (
         Array.isArray(
-            dados.registros
+            ficha.registros
         )
-        ? dados.registros
-        : [];
+    ) {
 
+        registros =
+            ficha.registros.map(
+                registro => ({
 
-    renderizarRegistros();
+                    data:
+                        registro.data ||
+                        "",
 
+                    titulo:
+                        registro.titulo ||
+                        "",
 
-    /* HISTÓRICO */
+                    descricao:
+                        registro.descricao ||
+                        ""
 
-    historico =
-        Array.isArray(
-            dados.historico
-        )
-        ? dados.historico
-        : [];
+                })
+            );
 
+    } else {
 
-    renderizarHistorico();
-
-
-    /* ATUALIZAÇÕES */
-
-    atualizarPontos();
-
-    atualizarCargo();
-
-    atualizarHUD();
-
-
-    /* IMAGEM */
-
-    if(
-        dados.identidade &&
-        dados.identidade.imagem
-    ){
-
-        document.getElementById(
-            "preview"
-        ).innerHTML = `
-
-            <img
-                src="${dados.identidade.imagem}"
-                alt="Imagem do personagem"
-            >
-
-        `;
+        registros = [];
 
     }
 
 
-    alert(
-        "Ficha carregada com sucesso."
-    );
+    /* =====================================================
+       HISTÓRICO
+    ===================================================== */
+
+    if (
+        Array.isArray(
+            ficha.historico
+        )
+    ) {
+
+        historico =
+            ficha.historico.map(
+                alteracao => ({
+
+                    data:
+                        alteracao.data ||
+                        "",
+
+                    campo:
+                        alteracao.campo ||
+                        "",
+
+                    antigo:
+                        alteracao.antigo ??
+                        "",
+
+                    novo:
+                        alteracao.novo ??
+                        ""
+
+                })
+            );
+
+    } else {
+
+        historico = [];
+
+    }
+
+
+    /* =====================================================
+       IMAGEM
+    ===================================================== */
+
+    if (
+        typeof ficha.imagem ===
+        "string" &&
+        ficha.imagem.length > 0
+    ) {
+
+        imagemPersonagem =
+            ficha.imagem;
+
+
+        const preview =
+            document.getElementById(
+                "preview"
+            );
+
+
+        preview.innerHTML = "";
+
+
+        const img =
+            document.createElement(
+                "img"
+            );
+
+
+        img.src =
+            imagemPersonagem;
+
+
+        preview.appendChild(
+            img
+        );
+
+    } else {
+
+        imagemPersonagem = "";
+
+    }
+
+
+    /* =====================================================
+       ATUALIZAÇÃO GERAL
+    ===================================================== */
+
+    atualizarCargo();
+
+    atualizarPontos();
+
+    atualizarVida();
+
+    atualizarSanidade();
+
+    atualizarLimite();
+
+    atualizarPericias();
+
+    renderizarInventario();
+
+    renderizarRegistros();
+
+    renderizarHistorico();
 
 }
 
 
 /* =========================================================
-   INICIALIZAÇÃO
+   BOTÕES DE SALVAR E CARREGAR
 ========================================================= */
 
-atualizarPontos();
+document
+    .getElementById("btnSalvar")
+    .addEventListener(
+        "click",
+        salvarJSON
+    );
 
-atualizarCargo();
 
-atualizarHUD();
+document
+    .getElementById("btnCarregar")
+    .addEventListener(
+        "click",
+        abrirCarregador
+    );
 
-renderizarInventario();
 
-renderizarRegistros();
+document
+    .getElementById("arquivoJSON")
+    .addEventListener(
+        "change",
+        carregarJSON
+    );
 
-renderizarHistorico();
+
+/* =========================================================
+   BOTÃO — ADICIONAR ITEM
+========================================================= */
+
+document
+    .getElementById("btnAdicionarItem")
+    .addEventListener(
+        "click",
+        () => {
+
+            adicionarItem();
+
+        }
+    );
+
+
+/* =========================================================
+   BOTÃO — ADICIONAR REGISTRO
+========================================================= */
+
+document
+    .getElementById("btnAdicionarRegistro")
+    .addEventListener(
+        "click",
+        adicionarRegistro
+    );
+
+
+/* =========================================================
+   INICIALIZAÇÃO FINAL
+========================================================= */
+
+inicializarFicha();
 
 </script>
 
